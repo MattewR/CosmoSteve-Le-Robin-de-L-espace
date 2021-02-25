@@ -7,14 +7,20 @@ public class DeplacementJoueur : MonoBehaviour
     public bool isJumping = false;
     public bool auSol = true;
 
+    public Transform groundCheckLeft;
+    public Transform groundCheckRight;
+
     public Rigidbody2D rb;
     private Vector3 velocite = Vector3.zero;
     // Update is called once per frame
     void FixedUpdate()
     {
+        auSol = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
+
         float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetButton("Jump") && auSol==true)
+       // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
         {
             isJumping = true;
         }
