@@ -4,8 +4,8 @@ public class DeplacementJoueur : MonoBehaviour
 {
     public float vitesseMouvement;
     public float forceDeSaut;
-    public bool isJumping = false;
-    public bool auSol = true;
+    private bool isJumping = false;
+    private bool auSol = true;
 
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
@@ -19,7 +19,7 @@ public class DeplacementJoueur : MonoBehaviour
 
         float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump") || Input.GetButton("Jump") && auSol==true)
+        if ((Input.GetButtonDown("Jump") || Input.GetButton("Jump")) && auSol==true)
        // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
         {
             isJumping = true;
