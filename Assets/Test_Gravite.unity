@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44006624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.192, y: -1.17, z: 0}
+  m_LocalPosition: {x: 0.192, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296937834}
@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 296937835}
   - component: {fileID: 296937839}
   - component: {fileID: 296937838}
+  - component: {fileID: 296937840}
   m_Layer: 0
   m_Name: Joueur
   m_TagString: Untagged
@@ -232,8 +233,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296937832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -0.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.234, y: -0.981, z: 0}
+  m_LocalScale: {x: 0.89221025, y: 0.886018, z: 1}
   m_Children:
   - {fileID: 2030343622}
   - {fileID: 44006625}
@@ -253,9 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitesseMouvement: 250
-  forceDeSaut: 300
-  isJumping: 0
-  auSol: 1
+  forceDeSaut: 8060
   groundCheckLeft: {fileID: 2030343622}
   groundCheckRight: {fileID: 44006625}
   rb: {fileID: 296937837}
@@ -297,10 +296,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 70
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -338,6 +337,27 @@ CircleCollider2D:
   m_Offset: {x: 0.102397025, y: -1.001039}
   serializedVersion: 2
   m_Radius: 0.14607051
+--- !u!114 &296937840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296937832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f490e1d03a73f41b84cfc31531f069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 296937837}
+  accelerationGravitationnelle: {x: 0, y: 0}
+  verificationSolGauche: {fileID: 2030343622}
+  verificationSolDroit: {fileID: 44006625}
+  auSol: 0
+  champDeGravite: 0
+  massePlanete: 5.972e+24
+  distanceJoueur: 0
+  distance: 6371000
 --- !u!1 &1310365036
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +411,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -415,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310365036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1643,7 +1663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030343621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.371, y: -1.17, z: 0}
+  m_LocalPosition: {x: -0.371, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296937834}
