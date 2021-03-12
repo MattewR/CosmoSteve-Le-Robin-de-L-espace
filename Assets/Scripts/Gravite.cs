@@ -41,6 +41,7 @@ public class Gravite : MonoBehaviour
         }
     }
 
+    //Cette fonction applique la gravité à un RigidBody qui sont dans les airs
     void Attraction()
     {
         rb.AddForce(accelerationGravitationnelle);
