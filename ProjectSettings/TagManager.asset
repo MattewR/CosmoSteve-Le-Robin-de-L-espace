@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Mains
+    uniqueID: 425323309
+    locked: 0
