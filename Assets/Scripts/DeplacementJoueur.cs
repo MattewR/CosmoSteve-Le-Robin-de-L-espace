@@ -4,6 +4,11 @@ public class DeplacementJoueur : MonoBehaviour
 {
     public float vitesseMouvement;
     public float forceDeSaut;
+
+    public float cFriction;
+    public float fNormale;
+    public float mass;
+
     private bool isJumping = false;
     private bool auSol = true;
 
@@ -25,7 +30,15 @@ public class DeplacementJoueur : MonoBehaviour
             isJumping = true;
         }
 
-        DeplacerJoueur(mouvementHorizontal);
+   
+        //fNormale = rb.GetMass
+        if ((Input.GetAxis("Horizontal") > 0)) fNormale = 5;
+        if ((Input.GetAxis("Horizontal") < 0)) fNormale = -5;
+        if (auSol == false && fNormale > 0) fNormale = 2;
+        if (auSol == false && fNormale < 0) fNormale = -2;
+        if (cFriction == 5) DeplacerJoueur(mouvementHorizontal + fNormale);
+        else DeplacerJoueur(mouvementHorizontal);
+
     }
 
     void DeplacerJoueur(float _mouvementHorizontal)
