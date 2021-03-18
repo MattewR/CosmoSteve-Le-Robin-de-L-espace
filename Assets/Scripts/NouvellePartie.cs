@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DemarrerJeu : MonoBehaviour
+public class NouvellePartie : MonoBehaviour
 {
-    public void changer_niveau(string nom_scene)
+    public void Changer_niveau(string nom_scene)
     {
         SceneManager.LoadScene(nom_scene);
     }
