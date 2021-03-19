@@ -6,6 +6,7 @@ public class Gravite : MonoBehaviour
     //Variables 
     public Rigidbody2D rb;
     public Vector2 accelerationGravitationnelle;
+    public InformationsNiveau informationsNiveau;
 
     public Transform verificationSolGauche;
     public Transform verificationSolDroit;
@@ -13,15 +14,17 @@ public class Gravite : MonoBehaviour
     public bool auSol;
 
     public float champDeGravite;
-    public float massePlanete = 5.972f * Mathf.Pow(10, 24);
+    public float massePlanete;
     private float constanteG = 6.6742f * Mathf.Pow(10, -11);
-    private float rayonPlanete = 6371000;
+    private float rayonPlanete;
     public float distanceJoueur;
     public float distance;
 
     // Start is called before the first frame update
     void Start()
     {
+        massePlanete = informationsNiveau.getMassePlanete();
+        rayonPlanete = informationsNiveau.getRayonPlanete();
         distanceJoueur = rb.position.y;
         distance = distanceJoueur + rayonPlanete;
         champDeGravite = (constanteG * massePlanete) / Mathf.Pow(distance, 2);

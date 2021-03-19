@@ -105787,7 +105787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886349217
 GameObject:
@@ -105918,6 +105918,51 @@ MonoBehaviour:
   player: {fileID: 1687039841}
   timeOffset: 0.2
   posOffset: {x: 1.8, y: 1, z: -10}
+--- !u!1 &1410428402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410428404}
+  - component: {fileID: 1410428403}
+  m_Layer: 0
+  m_Name: InformationsNiveau1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1410428403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410428402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98249b9e9355834997b172fbbd10515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  massePlanete: 0
+  rayonPlanete: 0
+--- !u!4 &1410428404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410428402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.700436, y: 0.8352188, z: -35.78986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687039841
 GameObject:
   m_ObjectHideFlags: 0
@@ -106069,7 +106114,7 @@ Transform:
   - {fileID: 799884688}
   - {fileID: 886349218}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1687039847
 CircleCollider2D:
@@ -106101,6 +106146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1687039844}
   accelerationGravitationnelle: {x: 0, y: 0}
+  informationsNiveau: {fileID: 1410428403}
   verificationSolGauche: {fileID: 799884688}
   verificationSolDroit: {fileID: 886349218}
   auSol: 0
@@ -140753,7 +140799,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979206161
 MonoBehaviour:
