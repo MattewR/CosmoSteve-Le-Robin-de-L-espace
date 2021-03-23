@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DeathZone
   - PlayerSpawn
+  - snow_bar
+  - snow_bar_tilted
   layers:
   - Default
   - TransparentFX

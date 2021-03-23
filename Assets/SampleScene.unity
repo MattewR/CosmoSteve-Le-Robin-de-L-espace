@@ -105505,8 +105505,8 @@ GameObject:
   - component: {fileID: 763672797}
   - component: {fileID: 763672796}
   m_Layer: 0
-  m_Name: snow_bar (2)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105523,7 +105523,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &763672796
 MonoBehaviour:
@@ -105772,8 +105772,8 @@ GameObject:
   - component: {fileID: 871754142}
   - component: {fileID: 871754141}
   m_Layer: 0
-  m_Name: snow_bar (5)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105879,7 +105879,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886349217
 GameObject:
@@ -106023,8 +106023,8 @@ GameObject:
   - component: {fileID: 1193914382}
   - component: {fileID: 1193914381}
   m_Layer: 0
-  m_Name: snow_bar (2)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106055,7 +106055,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.025503159}
+  m_Offset: {x: -0.20424244, y: -0.003293395}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106066,7 +106066,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.34899372}
+  m_Size: {x: 2.2299051, y: 0.39341325}
   m_EdgeRadius: 0
 --- !u!212 &1193914383
 SpriteRenderer:
@@ -106126,8 +106126,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193914380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.546, y: -1.506, z: 0}
-  m_LocalScale: {x: 2.7067926, y: 3.309807, z: 1}
+  m_LocalPosition: {x: 21.546, y: -1.515, z: 0}
+  m_LocalScale: {x: 2.7067926, y: 3.2644923, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -106145,8 +106145,8 @@ GameObject:
   - component: {fileID: 1239133885}
   - component: {fileID: 1239133884}
   m_Layer: 0
-  m_Name: snow_bar (3)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106252,7 +106252,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240988829
 GameObject:
@@ -106267,8 +106267,8 @@ GameObject:
   - component: {fileID: 1240988831}
   - component: {fileID: 1240988830}
   m_Layer: 0
-  m_Name: snow_bar (2)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106374,7 +106374,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289754498
 GameObject:
@@ -106389,8 +106389,8 @@ GameObject:
   - component: {fileID: 1289754501}
   - component: {fileID: 1289754500}
   m_Layer: 0
-  m_Name: snow_bar (3)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106407,7 +106407,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1289754500
 MonoBehaviour:
@@ -106511,8 +106511,8 @@ GameObject:
   - component: {fileID: 1300228142}
   - component: {fileID: 1300228141}
   m_Layer: 0
-  m_Name: snow_bar (4)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106618,7 +106618,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667495158
 GameObject:
@@ -106633,8 +106633,8 @@ GameObject:
   - component: {fileID: 1667495161}
   - component: {fileID: 1667495160}
   m_Layer: 0
-  m_Name: snow_bar (4)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106651,7 +106651,7 @@ Transform:
   m_LocalScale: {x: 1.3630723, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667495160
 MonoBehaviour:
@@ -106776,14 +106776,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40a0ba99b35ebf46b155918bde74981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseMouvement: 250
+  gravite: {fileID: 1687039848}
+  vitesseMouvement: 500
   forceDeSaut: 8060
-  cFriction: 0
-  fNormale: 0
-  mass: 0
   groundCheckLeft: {fileID: 799884688}
   groundCheckRight: {fileID: 886349218}
   rb: {fileID: 1687039844}
+  cFriction: 0
 --- !u!61 &1687039843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106948,8 +106947,8 @@ GameObject:
   - component: {fileID: 1867621747}
   - component: {fileID: 1867621746}
   m_Layer: 0
-  m_Name: snow_bar (3)
-  m_TagString: Untagged
+  m_Name: snow_bar15degree
+  m_TagString: snow_bar_tilted
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107055,7 +107054,7 @@ Transform:
   m_LocalScale: {x: 2.546865, y: 7.6100307, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18}
 --- !u!1 &1911306963
 GameObject:
@@ -141467,8 +141466,8 @@ GameObject:
   - component: {fileID: 1942482086}
   - component: {fileID: 1942482085}
   m_Layer: 0
-  m_Name: snow_bar (4)
-  m_TagString: Untagged
+  m_Name: snow_bar
+  m_TagString: snow_bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141574,7 +141573,7 @@ Transform:
   m_LocalScale: {x: 1.4031037, y: 3.2394636, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979206159
 GameObject:

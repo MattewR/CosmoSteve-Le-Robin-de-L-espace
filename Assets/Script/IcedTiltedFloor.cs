@@ -1,11 +1,14 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
-public class normalFloor : MonoBehaviour
+public class IcedTiltedFloor : MonoBehaviour
 {
     public DeplacementJoueur deplacementJoueur;
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        deplacementJoueur.cFriction = 0.03f;
+        deplacementJoueur.cFriction = 0.01f;
     }
 }
