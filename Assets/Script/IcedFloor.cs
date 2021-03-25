@@ -9,6 +9,6 @@ public class IcedFloor : MonoBehaviour
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        deplacementJoueur.cFriction = 0.01f;
+        deplacementJoueur.cFriction = 0.03f;
     }
 }

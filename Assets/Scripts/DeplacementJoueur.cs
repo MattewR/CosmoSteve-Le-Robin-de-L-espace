@@ -18,18 +18,17 @@ public class DeplacementJoueur : MonoBehaviour
     private float fNormale;
     private float mass;
     private float poidReel;
-    private float angle;
+    public float angle;
     private float gravitee;
     private float fFriction;
-    private Transform anglePlateforme;
+    private int dir;
+    public Transform anglePlateforme;
 
-    public void Awake()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        anglePlateforme = GameObject.FindGameObjectWithTag("snow_bar_tilted").transform;
-        angle = anglePlateforme.rotation.z;
-        angle = -angle;
+        angle = -collision.transform.rotation.z;
     }
-    
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -37,31 +36,44 @@ public class DeplacementJoueur : MonoBehaviour
 
         float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime;
 
-        if ((Input.GetButtonDown("Jump") || Input.GetButton("Jump")) && auSol==true)
-       // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
+        if ((Input.GetButtonDown("Jump") || Input.GetButton("Jump")) && auSol == true)
+        // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
         {
             isJumping = true;
         }
 
 
         //Trouver la force de friction avec la plateforme
-        mass = 7;       
+        mass = 7;
         gravitee = gravite.champDeGravite;
         poidReel = mass * gravitee;
         fNormale = poidReel;
         fFriction = fNormale * cFriction;
-        if (cFriction != 2)
-        {
 
-            if ((Input.GetAxis("Horizontal") > 0.1)) DeplacerJoueur(mouvementHorizontal - fFriction); ;
-            if ((Input.GetAxis("Horizontal") < -0.1)) DeplacerJoueur(mouvementHorizontal + fFriction); ;
-            if (auSol == false && (Input.GetAxis("Horizontal") > 0)) DeplacerJoueur(mouvementHorizontal - (fFriction)); ;
-            if (auSol == false && (Input.GetAxis("Horizontal") < 0)) DeplacerJoueur(mouvementHorizontal + (fFriction)); ;
-            if ((Input.GetAxis("Horizontal") == 0)) DeplacerJoueur(mouvementHorizontal); 
-            Debug.Log("M" + mouvementHorizontal);
-            Debug.Log("F" + fFriction);
-        }
        
+       
+        if (cFriction == 0.03f)
+        {
+            if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
+            {
+                DeplacerJoueur(mouvementHorizontal + fFriction);
+                dir = 1;
+            }
+            else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
+            {
+                DeplacerJoueur(mouvementHorizontal - fFriction);
+                dir = -1;
+            }
+            else if (auSol == true && (Input.GetAxis("Horizontal") == 0) && cFriction == 0.03f)
+            {
+                if (angle < 0) DeplacerJoueur(-System.Math.Abs(fFriction * 3 * dir));
+                else if (angle > 0) DeplacerJoueur(System.Math.Abs(fFriction * 3 * dir));
+                else DeplacerJoueur(fFriction * 3 * dir);
+            }
+        }
+        else DeplacerJoueur(mouvementHorizontal);
+
+
 
     }
 

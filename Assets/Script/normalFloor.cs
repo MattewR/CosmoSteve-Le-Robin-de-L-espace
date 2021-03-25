@@ -6,6 +6,6 @@ public class normalFloor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        deplacementJoueur.cFriction = 0.03f;
+        deplacementJoueur.cFriction = 0.08f;
     }
 }
