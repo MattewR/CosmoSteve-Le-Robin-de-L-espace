@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeathZone
+  - PlayerSpawn
+  - snow_bar
+  - snow_bar_tilted
   layers:
   - Default
   - TransparentFX
@@ -38,15 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3492504083
-    locked: 0
-  - name: Indicator
-    uniqueID: 3602586877
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Mains
-    uniqueID: 425323309
     locked: 0
