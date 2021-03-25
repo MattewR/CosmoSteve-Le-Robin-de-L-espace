@@ -8,7 +8,7 @@ public class SuivreSourisArc : MonoBehaviour
 
     private Transform transformDeLArc;
     private float angle;
-
+    private bool isRight = true;
    
     
     // Start is called before the first frame update
@@ -19,8 +19,45 @@ public class SuivreSourisArc : MonoBehaviour
 
     public float getAngle()
     {
-        Debug.Log(angle);
-        return angle;
+
+        if (angle < 50 && angle > -25)
+
+        {
+
+            return angle;
+        }
+        else if (angle > 130 || (angle < 0 && angle < -155))
+        {
+
+            return angle;
+        }
+        else
+        {
+            //Debug.Log(angle);
+            if (isRight == false)
+            {
+                if(Mathf.Abs(130f - angle) < Mathf.Abs(-155f - angle))
+                {
+                    return 130f;
+                }
+                else
+                {
+                    return -155f;
+                }
+            }
+            else
+            {
+                if (Mathf.Abs(50f - angle) < Mathf.Abs(-25f - angle))
+                {
+                    return 50f;
+                }
+                else
+                {
+                    return -25f;
+                }
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -33,19 +70,21 @@ public class SuivreSourisArc : MonoBehaviour
         Debug.Log("z : " + mouse.z.ToString());*/
         Vector3 direction = (mouse - transform.position).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
+
         Debug.Log("angle : " + angle.ToString());
-        if (angle > 90 || angle < -90)
+        
+        if (angle < 50 && angle > -25)
+
         {
-            transformDeLArc.eulerAngles = new Vector3(0, 180, -(angle - 180));
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else
-        {
+            isRight = true;
             transformDeLArc.eulerAngles = new Vector3(0, 0, angle);
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-
+        else if(angle > 130 || (angle < 0 && angle < -155)){
+            isRight = false;
+            transformDeLArc.eulerAngles = new Vector3(0, 180, -(angle - 180));
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
 
     }
 }
