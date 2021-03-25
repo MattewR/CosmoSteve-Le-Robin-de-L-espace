@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LancerNiveau1 : MonoBehaviour
+public class ChangementDeScene : MonoBehaviour
 {
     public void Changer_niveau(string nom_scene)
     {
