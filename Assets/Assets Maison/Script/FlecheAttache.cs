@@ -9,6 +9,7 @@ public class FlecheAttache : MonoBehaviour
     public Func<float, float[], Vector3>[] fonctionUtil;
     public float[] variablesImport;
     private float frames = 0;
+
  
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +32,10 @@ public class FlecheAttache : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.timeScale != 1)
+        {
+            UnityEngine.Object.Destroy(gameObject);
+        }
         frames += Time.deltaTime;
         try
         {
