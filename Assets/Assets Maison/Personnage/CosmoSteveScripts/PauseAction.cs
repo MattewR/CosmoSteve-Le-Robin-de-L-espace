@@ -7,14 +7,24 @@ public class PauseAction : MonoBehaviour
     public bool pause = false;
     GameObject canvasMenu;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         canvasMenu = GameObject.Find("mainCanvas");
+        canvasMenu.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            Debug.Log(canvasMenu.activeSelf);
+        }
+        catch
+        {
+
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pause)
