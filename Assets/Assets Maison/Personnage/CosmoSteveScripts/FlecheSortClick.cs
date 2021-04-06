@@ -15,9 +15,11 @@ public class FlecheSortClick : MonoBehaviour
                  * variables 3 = gravity
                  * variables 4 = starting velocity
                  * variables 5 = drag_coefficient
+                 * variables 6 = Constante Balle
                  */
                 (temps, variables) => {
                     //En x
+                    temps = temps * variables[6];
                     float x = (variables[4] * temps * Mathf.Cos(variables[2]))  + variables[0];
                     float y = (variables[4] * temps * Mathf.Sin(variables[2]) + variables[1]) + (0.5f * -1 * variables[3] * Mathf.Pow(temps,2));
                     return new Vector3(x,y,0);
@@ -61,11 +63,12 @@ public class FlecheSortClick : MonoBehaviour
     private double frameCounter = 0;
     private List<GameObject> balles = new List<GameObject>();
     private float timeSpent = 10f;
+    public float fastBallC = 1f;
     // Start is called before the first frame update
     void Start()
 
     {
-        
+
         Steve = this.gameObject;
         //Debug.Log(Steve);
         scriptArc = Steve.GetComponent<SuivreSourisArc>();
@@ -87,7 +90,7 @@ public class FlecheSortClick : MonoBehaviour
         frameCounter += 1;
         timeSpent += Time.deltaTime;
 
-        if(Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             hold_time = 0;
             try
@@ -106,9 +109,9 @@ public class FlecheSortClick : MonoBehaviour
         if (Input.GetMouseButton(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
             hold_time += Time.deltaTime;
-            Debug.Log( hold_time.ToString());
+            Debug.Log(hold_time.ToString());
             Debug.Log("func e^x: " + (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1)).ToString());
-            if (frameCounter % 45 == 1)
+            if (frameCounter % 20 == 1)
             {
                 float final_velocity = (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1));
                 variablesWFunction = new float[]
@@ -119,7 +122,7 @@ public class FlecheSortClick : MonoBehaviour
                 gravity,
                 final_velocity,
                 6f,
-
+                fastBallC
 
                 };
                 GameObject tracer = new GameObject();
@@ -137,6 +140,8 @@ public class FlecheSortClick : MonoBehaviour
                 FlecheAttache scriptAttRect = tracer.GetComponent<FlecheAttache>();
                 scriptAttRect.variablesImport = variablesWFunction;
                 scriptAttRect.fonctionUtil = functionsAttach;
+
+
                 //Debug.Log(scriptAtt.variablesImport[0]);
                 //Debug.Log(scriptAtt.fonctionUtil.Length);
 
@@ -145,12 +150,12 @@ public class FlecheSortClick : MonoBehaviour
 
             }
         }
-        
+
         if (Input.GetMouseButtonUp(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
 
-          
-            
+
+
             float final_velocity = (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1));
             variablesWFunction = new float[]
             {
@@ -160,12 +165,12 @@ public class FlecheSortClick : MonoBehaviour
                 gravity,
                 final_velocity,
                 6f,
-
+                1
 
             };
 
 
-            
+
 
             PhysicsMaterial2D materielle = new PhysicsMaterial2D
             {
@@ -182,16 +187,27 @@ public class FlecheSortClick : MonoBehaviour
             fleche.AddComponent<SpriteRenderer>();
             SpriteRenderer imageFleche = fleche.GetComponent<SpriteRenderer>();
             imageFleche.sprite = Resources.Load<Sprite>("Sprites/flechemod2");
-            
+
             imageFleche.sortingLayerName = "Mains";
 
             Transform flecheAccesTrans = fleche.GetComponent<Transform>();
-            flecheAccesTrans.localScale = new Vector3(0.344f, 0.362f, 0) * Scale; 
+            flecheAccesTrans.localScale = new Vector3(0.344f, 0.362f, 0) * Scale;
 
             fleche.AddComponent<FlecheAttache>();
-            FlecheAttache scriptAtt= fleche.GetComponent<FlecheAttache>();
+            
+            FlecheAttache scriptAtt = fleche.GetComponent<FlecheAttache>();
             scriptAtt.variablesImport = variablesWFunction;
             scriptAtt.fonctionUtil = functionsAttach;
+
+            fleche.AddComponent<Rigidbody2D>();
+            Rigidbody2D body = fleche.GetComponent<Rigidbody2D>();
+            body.bodyType = RigidbodyType2D.Kinematic;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
+            body.useFullKinematicContacts = true;
+            /*fleche.AddComponent<BoxCollider2D>();
+            BoxCollider2D colliderFleche = fleche.GetComponent<BoxCollider2D>();
+            colliderFleche.offset = new Vector2(1.4723f, 0.0141f);
+            colliderFleche.size = new Vector2(2.699f, 0.54714f);*/
             //Debug.Log(scriptAtt.variablesImport[0]);
             //Debug.Log(scriptAtt.fonctionUtil.Length);
             hold_time = 0;

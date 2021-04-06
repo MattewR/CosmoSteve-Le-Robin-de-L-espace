@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 
 public class SuivreSourisArc : MonoBehaviour
@@ -9,12 +11,16 @@ public class SuivreSourisArc : MonoBehaviour
     private Transform transformDeLArc;
     private float angle;
     private bool isRight = true;
-   
+    private Camera cameraMaison;
+    private Vector3 camOffset;
     
     // Start is called before the first frame update
     void Awake()
     {
-     transformDeLArc = transform.Find("Vise");
+        transformDeLArc = transform.Find("Vise");
+        cameraMaison = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        CameraFollow scriptFollow = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
+        camOffset = new Vector3(scriptFollow.posOffset.x, scriptFollow.posOffset.y, scriptFollow.posOffset.z);
     }
 
     public float getAngle()
@@ -64,14 +70,23 @@ public class SuivreSourisArc : MonoBehaviour
     void Update()
     {
 
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        /*Debug.Log("x : " + mouse.x.ToString());
-        Debug.Log("y : " + mouse.y.ToString());
-        Debug.Log("z : " + mouse.z.ToString());*/
-        Vector3 direction = (mouse - transform.position).normalized;
+        Vector3 mouse = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10f);
+        //Debug.Log(mouse);
+        Vector3 cameraMouse = cameraMaison.ScreenToWorldPoint(mouse);
+        
+        cameraMouse.z = 0f;
+        //Debug.Log(cameraMouse);
+        //Debug.Log("y : " + mouse.y.ToString());
+        //Debug.Log("z : " + mouse.z.ToString());
+        Debug.Log(cameraMouse - (cameraMaison.transform.position + camOffset));
+        Vector3 rotVect = cameraMouse - (cameraMaison.transform.position + camOffset);
+        rotVect.z = 0;
+        rotVect.y *= -1;
+        rotVect.x *= -1;
+        Vector3 direction = (rotVect).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Debug.Log("angle : " + angle.ToString());
+        //Debug.Log("angle : " + angle.ToString());
         
         if (angle < 50 && angle > -25)
 

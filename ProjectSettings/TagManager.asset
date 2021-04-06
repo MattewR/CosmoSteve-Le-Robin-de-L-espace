@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpawn
   - snow_bar
   - snow_bar_tilted
+  - terrain
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3448484867
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Indicator
+    uniqueID: 2123727339
+    locked: 0
+  - name: Mains
+    uniqueID: 1431867987
     locked: 0

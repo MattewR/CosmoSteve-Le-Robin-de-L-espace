@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Unity;
 using UnityEngine;
 using System;
 
@@ -10,14 +11,14 @@ public class FlecheAttache : MonoBehaviour
     public float[] variablesImport;
     private float frames = 0;
 
- 
+
     // Start is called before the first frame update
     void Awake()
     {
 
     }
 
-    void updateAngle(float t, float[] variables, Func<float,float[],Vector3> derive)
+    void updateAngle(float t, float[] variables, Func<float, float[], Vector3> derive)
     {
         Vector3 rot = derive(t, variables);
         transform.eulerAngles = rot;
@@ -28,6 +29,16 @@ public class FlecheAttache : MonoBehaviour
         Vector3 nouvellePos = fonction(t, variables);
         transform.position = nouvellePos;
 
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+
+            
+        Destroy(gameObject); 
+        
+        
+        
     }
     // Update is called once per frame
     void Update()
@@ -50,8 +61,11 @@ public class FlecheAttache : MonoBehaviour
             Debug.Log("Waiting for function assignement");
 
         }
+
         
 
         
     }
 }
+
+
