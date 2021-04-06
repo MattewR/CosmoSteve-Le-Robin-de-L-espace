@@ -9,6 +9,7 @@ TagManager:
   - snow_bar
   - snow_bar_tilted
   - terrain
+  - menuPause
   layers:
   - Default
   - TransparentFX
