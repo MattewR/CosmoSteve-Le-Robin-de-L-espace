@@ -24,7 +24,7 @@ public class DeplacementJoueur : MonoBehaviour
     private int dir;
     public Transform anglePlateforme;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         angle = -collision.transform.rotation.z;
     }
