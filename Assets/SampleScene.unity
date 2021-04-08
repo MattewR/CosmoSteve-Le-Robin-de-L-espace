@@ -108318,7 +108318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravite: {fileID: 1302538434}
   vitesseMouvement: 300
-  forceDeSaut: 12000
+  forceDeSaut: 8060
   groundCheckLeft: {fileID: 799884688}
   groundCheckRight: {fileID: 886349218}
   rb: {fileID: 1302538436}
