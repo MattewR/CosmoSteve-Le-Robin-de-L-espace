@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PauseAction : MonoBehaviour
 {
-    public bool pause = false;
     GameObject canvasMenu;
     // Start is called before the first frame update
     void Awake()
@@ -27,30 +26,19 @@ public class PauseAction : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pause)
+            if(canvasMenu.activeSelf == false)
             {
-                pause = false;
-
+                activateMenu();
             }
             else
             {
-                pause = true;
+                deactivateMenu();
             }
         }
-        if (pause == true)
-        {
-            activateMenu();
-        }
-        else
-        {
-            deactivateMenu();
-        }
+
     }
 
-    public void pauseToUnpause()
-    {
-        pause = !pause;
-    }
+
 
     public void activateMenu()
     {

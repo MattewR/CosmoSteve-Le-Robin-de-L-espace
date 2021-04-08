@@ -191,11 +191,12 @@ public class FlecheSortClick : MonoBehaviour
             imageFleche.sortingLayerName = "Mains";
 
             Transform flecheAccesTrans = fleche.GetComponent<Transform>();
-            flecheAccesTrans.localScale = new Vector3(0.344f, 0.362f, 0) * Scale;
-
+            flecheAccesTrans.localScale = new Vector3(0.285f, 0.286f, 0) * Scale;
+            //Attache le script FlecheAttache
             fleche.AddComponent<FlecheAttache>();
-            
+            //Va chercher le script
             FlecheAttache scriptAtt = fleche.GetComponent<FlecheAttache>();
+            //Changer les variables public
             scriptAtt.variablesImport = variablesWFunction;
             scriptAtt.fonctionUtil = functionsAttach;
 

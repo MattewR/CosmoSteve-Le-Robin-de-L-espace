@@ -34,8 +34,11 @@ public class FlecheAttache : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
 
-            
-        Destroy(gameObject); 
+        if (!col.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        
         
         
         

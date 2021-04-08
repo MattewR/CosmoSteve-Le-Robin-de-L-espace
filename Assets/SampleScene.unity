@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 390906497}
   m_Layer: 5
   m_Name: mainCanvas
-  m_TagString: Untagged
+  m_TagString: menuPause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 3.7
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1302538431}
-        m_MethodName: pauseToUnpause
+        m_MethodName: deactivateMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -107795,8 +107795,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302538425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3891, y: 0.948, z: 0}
-  m_LocalScale: {x: 0.328171, y: 0.33, z: 1}
+  m_LocalPosition: {x: -1.166, y: 0.546, z: 0}
+  m_LocalScale: {x: 0.23716117, y: 0.25606042, z: 1}
   m_Children:
   - {fileID: 886349218}
   - {fileID: 799884688}
@@ -107871,7 +107871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233cae0b6f7b75e45a29797e340d4a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: 0
 --- !u!58 &1302538432
 CircleCollider2D:
   m_ObjectHideFlags: 0
