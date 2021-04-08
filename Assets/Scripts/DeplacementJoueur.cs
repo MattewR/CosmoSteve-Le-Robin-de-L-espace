@@ -51,7 +51,7 @@ public class DeplacementJoueur : MonoBehaviour
 
         //Trouver la force de friction avec la plateforme
         mass = 7;
-        gravitee = gravite.champDeGravite;
+        gravitee = gravite.accelerationGravitationnelle;
         poidReel = mass * gravitee;
         fNormale = poidReel;
         fFriction = fNormale * cFriction;
