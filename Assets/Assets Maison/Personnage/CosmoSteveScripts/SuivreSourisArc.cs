@@ -78,7 +78,7 @@ public class SuivreSourisArc : MonoBehaviour
         //Debug.Log(cameraMouse);
         //Debug.Log("y : " + mouse.y.ToString());
         //Debug.Log("z : " + mouse.z.ToString());
-        Debug.Log(cameraMouse - (cameraMaison.transform.position + camOffset));
+        //Debug.Log(cameraMouse - (cameraMaison.transform.position + camOffset));
         Vector3 rotVect = cameraMouse - (cameraMaison.transform.position + camOffset);
         rotVect.z = 0;
         rotVect.y *= -1;

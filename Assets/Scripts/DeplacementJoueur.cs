@@ -27,6 +27,12 @@ public class DeplacementJoueur : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         angle = -collision.transform.rotation.z;
+
+        if (collision.gameObject.CompareTag("snow_bar"))
+        {
+            cFriction = 0.03f;
+        }
+        else cFriction = 0.08f;
     }
 
     // Update is called once per frame
