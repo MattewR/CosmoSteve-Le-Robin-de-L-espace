@@ -26,4 +26,10 @@ public class InformationsNiveau : MonoBehaviour
     {
         return rayonPlanete;
     }
+
+    virtual public void miseAJour()
+    {
+
+    }
+
 }
