@@ -497,12 +497,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 578802390}
-  accelerationGravitationnelle: {x: 0, y: 0}
+  forceGravitationnelle: {x: 0, y: 0}
   informationsNiveau: {fileID: 0}
   verificationSolGauche: {fileID: 1416315508}
   verificationSolDroit: {fileID: 2083336559}
   auSol: 0
-  champDeGravite: 0
+  accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
   distanceJoueur: 0
   distance: 0
@@ -1073,12 +1073,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1138437571}
-  accelerationGravitationnelle: {x: 0, y: 0}
+  forceGravitationnelle: {x: 0, y: 0}
   informationsNiveau: {fileID: 1365724359}
   verificationSolGauche: {fileID: 187131310}
   verificationSolDroit: {fileID: 1942157603}
   auSol: 1
-  champDeGravite: 0
+  accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
   distanceJoueur: 0
   distance: 0
