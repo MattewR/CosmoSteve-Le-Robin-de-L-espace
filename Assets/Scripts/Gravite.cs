@@ -5,7 +5,7 @@ public class Gravite : MonoBehaviour
 {
     //Variables 
     public Rigidbody2D rb;
-    public Vector2 accelerationGravitationnelle;
+    public Vector2 forceGravitationnelle;
     public InformationsNiveau informationsNiveau;
 
     public Transform verificationSolGauche;
@@ -13,7 +13,8 @@ public class Gravite : MonoBehaviour
 
     public bool auSol;
 
-    public float champDeGravite;
+   // private float ratioJeuRealite = (8.5f / 1.83f);
+    public float accelerationGravitationnelle;
     public float massePlanete;
     private float constanteG = 6.6742f * Mathf.Pow(10, -11);
     private float rayonPlanete;
@@ -23,12 +24,13 @@ public class Gravite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        informationsNiveau.miseAJour();
         massePlanete = informationsNiveau.getMassePlanete();
         rayonPlanete = informationsNiveau.getRayonPlanete();
         distanceJoueur = rb.position.y;
         distance = distanceJoueur + rayonPlanete;
-        champDeGravite = (constanteG * massePlanete) / Mathf.Pow(distance, 2);
-        accelerationGravitationnelle = new Vector2(0, champDeGravite * -1)*rb.mass;
+        accelerationGravitationnelle = (constanteG * massePlanete) / Mathf.Pow(distance, 2);
+        forceGravitationnelle = new Vector2(0, accelerationGravitationnelle * -1)*rb.mass;
     }
 
     // Update is called once per frame
@@ -46,6 +48,6 @@ public class Gravite : MonoBehaviour
 
     void Attraction()
     {
-        rb.AddForce(accelerationGravitationnelle);
+        rb.AddForce(forceGravitationnelle);
     }
 }
