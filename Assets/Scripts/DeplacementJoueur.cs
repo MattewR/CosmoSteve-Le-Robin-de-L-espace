@@ -32,7 +32,7 @@ public class DeplacementJoueur : MonoBehaviour
         {
             cFriction = 0.03f;
         }
-        else cFriction = 0.08f;
+        else cFriction = 0.08f; 
     }
 
     // Update is called once per frame
