@@ -40,10 +40,10 @@ public class Gravite : MonoBehaviour
         //distance = distanceJoueur + rayonPlanete;
         auSol = Physics2D.OverlapArea(verificationSolGauche.position, verificationSolDroit.position);
 
-        if (auSol == false)
-        {
+       // if (auSol == false)
+       // {
             Attraction();
-        }
+       // }
     }
 
     void Attraction()
