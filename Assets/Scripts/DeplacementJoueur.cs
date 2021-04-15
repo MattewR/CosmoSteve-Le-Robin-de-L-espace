@@ -57,7 +57,7 @@ public class DeplacementJoueur : MonoBehaviour
         fFriction = fNormale * cFriction;
 
        
-       
+       //Script pour la glace
         if (cFriction == 0.03f)
         {
             if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
@@ -70,7 +70,7 @@ public class DeplacementJoueur : MonoBehaviour
                 DeplacerJoueur(mouvementHorizontal - fFriction);
                 dir = -1;
             }
-            else if (auSol == true && (Input.GetAxis("Horizontal") == 0) && cFriction == 0.03f)
+            else if (auSol == true && (Input.GetAxis("Horizontal") == 0))
             {
                 if (angle < 0) DeplacerJoueur(-System.Math.Abs(fFriction * 3 * dir));
                 else if (angle > 0) DeplacerJoueur(System.Math.Abs(fFriction * 3 * dir));
