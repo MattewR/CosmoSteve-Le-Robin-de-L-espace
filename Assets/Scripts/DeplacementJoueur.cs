@@ -12,7 +12,7 @@ public class DeplacementJoueur : MonoBehaviour
     public Transform groundCheckRight;
     public Rigidbody2D rb;
     private Vector3 velocite = Vector3.zero;
-    public Animator animation;
+
     //Paramètres de la friction
     public float cFriction;
     private float fNormale;
@@ -41,7 +41,6 @@ public class DeplacementJoueur : MonoBehaviour
         auSol = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
         float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime;
-        
 
         if ((Input.GetButtonDown("Jump") || Input.GetButton("Jump")) && auSol == true)
         // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
@@ -94,11 +93,6 @@ public class DeplacementJoueur : MonoBehaviour
             rb.AddForce(new Vector2(0f, forceDeSaut));
             isJumping = false;
         }
-    }
-
-    public bool getStatusSol()
-    {
-        return auSol;
     }
 
 }
