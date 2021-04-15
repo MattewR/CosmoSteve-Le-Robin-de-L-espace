@@ -153,6 +153,7 @@ public class FlecheSortClick : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
+            timeSpent = 0;
 
 
 
