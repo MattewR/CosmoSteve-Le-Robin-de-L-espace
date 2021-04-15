@@ -63,12 +63,26 @@ public class FlecheSortClick : MonoBehaviour
     private double frameCounter = 0;
     private List<GameObject> balles = new List<GameObject>();
     private float timeSpent = 10f;
+    private Gravite scriptGrav;
     public float fastBallC = 1f;
+    private Vector3 oldPos = Vector3.zero;
+
+
+
+
+
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
 
     {
-
+        
         Steve = this.gameObject;
         //Debug.Log(Steve);
         scriptArc = Steve.GetComponent<SuivreSourisArc>();
@@ -77,7 +91,18 @@ public class FlecheSortClick : MonoBehaviour
         {
             Debug.Log("bruh");
         }
+        scriptGrav = Steve.GetComponent­<Gravite>();
+        oldPos = getTransformVector();
+    }
 
+    private Vector3 getTransformVector()
+    {
+        return Steve.transform.position;
+    }
+
+    private float calcVelBoost()
+    {
+        return Vector3.Distance(getTransformVector(), oldPos);
     }
     public void ToggleScript()
     {
@@ -87,6 +112,15 @@ public class FlecheSortClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
+        if(frameCounter == 0)
+        {
+            gravity = scriptGrav.accelerationGravitationnelle;
+
+        }
+        
         frameCounter += 1;
         timeSpent += Time.deltaTime;
 
@@ -121,7 +155,7 @@ public class FlecheSortClick : MonoBehaviour
                 Mathf.Deg2Rad * scriptArc.getAngle(),
                 gravity,
                 final_velocity,
-                6f,
+                6f + calcVelBoost(),
                 fastBallC
 
                 };
@@ -164,7 +198,7 @@ public class FlecheSortClick : MonoBehaviour
                 Mathf.Deg2Rad * scriptArc.getAngle(),
                 gravity,
                 final_velocity,
-                6f,
+                6f + calcVelBoost(),
                 1
 
             };
@@ -225,7 +259,7 @@ public class FlecheSortClick : MonoBehaviour
             }
         }
 
-
+        oldPos = getTransformVector();
 
     }
 };

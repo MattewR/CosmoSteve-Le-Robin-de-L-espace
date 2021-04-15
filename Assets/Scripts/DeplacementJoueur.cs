@@ -35,6 +35,11 @@ public class DeplacementJoueur : MonoBehaviour
         else cFriction = 0.08f; 
     }
 
+    public bool getStatusSol()
+    {
+        return auSol;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
