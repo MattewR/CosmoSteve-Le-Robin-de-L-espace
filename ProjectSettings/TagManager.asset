@@ -57,3 +57,9 @@ TagManager:
   - name: Mains
     uniqueID: 1431867987
     locked: 0
+  - name: Plateforms
+    uniqueID: 1968908739
+    locked: 0
+  - name: Player
+    uniqueID: 2318570789
+    locked: 0
