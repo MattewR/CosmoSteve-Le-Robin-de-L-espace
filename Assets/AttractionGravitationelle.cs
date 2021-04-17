@@ -7,19 +7,32 @@ public class AttractionGravitationelle : MonoBehaviour
     //Variables
     public Rigidbody2D astre;
     private float constanteGravitationnelle = 6.6742f * Mathf.Pow(10, -11);
-    public float distanceRigidbody;
+    public float distance2Rigidbody;
+    public float distanceX;
+    public float distanceY;
+    public float attraction;
     public Rigidbody2D Steve;
-   // public Transform transform;
+    public float mG;
+    public float angle;
+    public Vector2 forceAttraction;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        mG = astre.mass * constanteGravitationnelle * Steve.mass;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        distanceRigidbody = Mathf.Sqrt(Mathf.Pow(this.transform.position.x - Steve.position.x, 2) + Mathf.Pow(this.transform.position.y - Steve.position.y, 2));
+        distanceX = this.transform.position.x - Steve.position.x;
+        distanceY = this.transform.position.y - Steve.position.y;
+        distance2Rigidbody = Mathf.Pow(distanceX, 2) + Mathf.Pow(distanceY, 2);
+        attraction = mG / distance2Rigidbody;
+        angle = Mathf.Atan2(distanceY, distanceX);
+        distanceX = Mathf.Sin(angle);
+        distanceY = Mathf.Cos(angle);
+        forceAttraction = new Vector2(distanceX, distanceY) * attraction;
+        Steve.AddForce(forceAttraction);
     }
 }

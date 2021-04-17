@@ -194,9 +194,6 @@ MonoBehaviour:
   rb: {fileID: 103631552}
   forceGravitationnelle: {x: 0, y: 0}
   informationsNiveau: {fileID: 477239865}
-  verificationSolGauche: {fileID: 2076361519}
-  verificationSolDroit: {fileID: 1426056058}
-  auSol: 1
   accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
   distanceJoueur: 0
@@ -41753,8 +41750,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astre: {fileID: 1030654343}
-  distanceRigidbody: 0
+  distance2Rigidbody: 0
+  distanceX: 0
+  distanceY: 0
+  attraction: 0
   Steve: {fileID: 103631552}
+  mG: 0
+  angle: 0
+  forceAttraction: {x: 0, y: 0}
 --- !u!58 &1030654348
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -8,11 +8,6 @@ public class Gravite : MonoBehaviour
     public Vector2 forceGravitationnelle;
     public InformationsNiveau informationsNiveau;
 
-    public Transform verificationSolGauche;
-    public Transform verificationSolDroit;
-
-    public bool auSol;
-
     public float accelerationGravitationnelle;
     public float massePlanete;
     private float constanteG = 6.6742f * Mathf.Pow(10, -11);
@@ -35,14 +30,7 @@ public class Gravite : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //distanceJoueur = rb.position.y;
-        //distance = distanceJoueur + rayonPlanete;
-        auSol = Physics2D.OverlapArea(verificationSolGauche.position, verificationSolDroit.position);
-
-       // if (auSol == false)
-       // {
-            Attraction();
-       // }
+        Attraction();
     }
 
     void Attraction()
