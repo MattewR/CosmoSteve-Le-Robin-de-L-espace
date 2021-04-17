@@ -13,7 +13,6 @@ public class Gravite : MonoBehaviour
 
     public bool auSol;
 
-   // private float ratioJeuRealite = (8.5f / 1.83f);
     public float accelerationGravitationnelle;
     public float massePlanete;
     private float constanteG = 6.6742f * Mathf.Pow(10, -11);

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DeplacementAstre : MonoBehaviour
 {
-    public bool test = false;
-    public Transform tranform;
+    new public Transform transform;
     public float vitesseDeplacement;
     public Rigidbody2D rb;
     private Vector3 velocite = Vector3.zero;
