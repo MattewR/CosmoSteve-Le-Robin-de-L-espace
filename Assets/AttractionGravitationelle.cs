@@ -19,7 +19,7 @@ public class AttractionGravitationelle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mG = astre.mass * constanteGravitationnelle * Steve.mass;
+        mG = 20000000000000 * constanteGravitationnelle * Steve.mass;
     }
 
     // Update is called once per frame
@@ -30,8 +30,8 @@ public class AttractionGravitationelle : MonoBehaviour
         distance2Rigidbody = Mathf.Pow(distanceX, 2) + Mathf.Pow(distanceY, 2);
         attraction = mG / distance2Rigidbody;
         angle = Mathf.Atan2(distanceY, distanceX);
-        distanceX = Mathf.Sin(angle);
-        distanceY = Mathf.Cos(angle);
+        distanceX = Mathf.Cos(angle);
+        distanceY = Mathf.Sin(angle);
         forceAttraction = new Vector2(distanceX, distanceY) * attraction;
         Steve.AddForce(forceAttraction);
     }
