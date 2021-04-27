@@ -27,8 +27,8 @@ public class DeplacementAstre : MonoBehaviour
         rb.velocity = Vector3.SmoothDamp(rb.velocity, velociteCible, ref velocite, .05f);
     }
 
-    public void resetPosition()
+    public void resetPosition(Vector3 position)
     {
-        transform.position = debutDeParcours;
+        transform.position = position;
     }
 }

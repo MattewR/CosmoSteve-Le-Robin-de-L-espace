@@ -26,7 +26,8 @@ public class DeathZone : MonoBehaviour
 
             if (astre == true)
             {
-                astreMassif.resetPosition();
+                Vector3 position = new Vector3(playerSpawn.position.x - 5, 20, 0); 
+                astreMassif.resetPosition(position);
             }
         }
     }
