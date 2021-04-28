@@ -8,5 +8,6 @@ public class InformationsNiveau2 : InformationsNiveau
     {
         setMassePlanete(7.342f * Mathf.Pow(10, 22));
         setRayonPlanete(1737400);
+        setAstre(false);
     }
 }

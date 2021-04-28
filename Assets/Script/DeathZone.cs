@@ -3,7 +3,15 @@
 public class DeathZone : MonoBehaviour
 {
     private Transform playerSpawn;
+    public InformationsNiveau niveau;
+    public bool astre;
+    public DeplacementAstre astreMassif;
 
+    private void Start()
+    {
+        niveau.miseAJour();
+        astre = niveau.getAstre();
+    }
 
     private void Awake()
     {
@@ -15,6 +23,8 @@ public class DeathZone : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.position = playerSpawn.position;
+            
+            niveau.reinitialiser(playerSpawn.position);
         }
     }
 }
