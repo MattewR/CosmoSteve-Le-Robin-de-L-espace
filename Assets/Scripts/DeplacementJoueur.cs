@@ -31,6 +31,9 @@ public class DeplacementJoueur : MonoBehaviour
         if (collision.gameObject.CompareTag("snow_bar"))
         {
             cFriction = 0.03f;
+        }else if (collision.gameObject.CompareTag("spider_web"))
+        {
+            cFriction = 0.67f;
         }
         else cFriction = 0.08f; 
     }
@@ -40,7 +43,14 @@ public class DeplacementJoueur : MonoBehaviour
     {
         auSol = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
-        float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime;
+        //Trouver la force de friction avec la plateforme
+        mass = 7;
+        gravitee = gravite.accelerationGravitationnelle;
+
+        poidReel = mass * gravitee;
+        fNormale = poidReel;
+
+        float mouvementHorizontal = Input.GetAxis("Horizontal") * vitesseMouvement * Time.deltaTime + (poidReel * 0.08f);
 
         if ((Input.GetButtonDown("Jump") || Input.GetButton("Jump")) && auSol == true)
         // if (Input.GetKeyDown(KeyCode.W) && auSol == true) 
@@ -48,26 +58,56 @@ public class DeplacementJoueur : MonoBehaviour
             isJumping = true;
         }
 
-
-        //Trouver la force de friction avec la plateforme
-        mass = 7;
-        gravitee = gravite.accelerationGravitationnelle;
-        poidReel = mass * gravitee;
-        fNormale = poidReel;
         fFriction = fNormale * cFriction;
 
-       
-       //Script pour la glace
-        if (cFriction == 0.03f)
+        
+        ////Script pour toile d'araignée
+        if (cFriction == 0.67f)
+        {
+          
+            /*if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction / 20)) > 0))
+            {
+                Debug.Log("Droiteeeeeeee");
+                DeplacerJoueur(mouvementHorizontal - (fFriction / 20));
+                dir = 1;
+            }
+            else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction / 20)) > 0))
+            {
+
+                Debug.Log("Gaucheeee");
+                DeplacerJoueur(mouvementHorizontal + (fFriction / 20));
+                dir = -1;
+            }
+            else */
+            if (auSol == true)
+            {
+                DeplacerJoueur(0);
+            }
+            else
+            {
+                if ((Input.GetAxis("Horizontal") < 0))
+                {
+                    DeplacerJoueur(-(fFriction / 20));
+                }
+                if ((Input.GetAxis("Horizontal") > 0))
+                {
+                    DeplacerJoueur((fFriction / 20));
+                }
+
+                if ((Input.GetAxis("Horizontal") == 0)) DeplacerJoueur(0);
+            }
+        }
+        //Script pour la glace
+        else if (cFriction == 0.03f)
         {
             if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
             {
-                DeplacerJoueur(mouvementHorizontal + fFriction);
+                DeplacerJoueur(mouvementHorizontal - fFriction);
                 dir = 1;
             }
             else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
             {
-                DeplacerJoueur(mouvementHorizontal - fFriction);
+                DeplacerJoueur(mouvementHorizontal + fFriction);
                 dir = -1;
             }
             else if (auSol == true && (Input.GetAxis("Horizontal") == 0))
@@ -77,7 +117,7 @@ public class DeplacementJoueur : MonoBehaviour
                 else DeplacerJoueur(fFriction * 3 * dir);
             }
         }
-        else DeplacerJoueur(mouvementHorizontal);
+        else DeplacerJoueur(mouvementHorizontal - fFriction);
 
 
 
@@ -88,7 +128,7 @@ public class DeplacementJoueur : MonoBehaviour
         Vector3 velociteCible = new Vector2(_mouvementHorizontal, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, velociteCible, ref velocite, .05f);
 
-        if(isJumping == true)
+        if (isJumping == true)
         {
             rb.AddForce(new Vector2(0f, forceDeSaut));
             isJumping = false;

@@ -109,8 +109,8 @@ public class FlecheSortClick : MonoBehaviour
         if (Input.GetMouseButton(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
             hold_time += Time.deltaTime;
-            Debug.Log(hold_time.ToString());
-            Debug.Log("func e^x: " + (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1)).ToString());
+            //Debug.Log(hold_time.ToString());
+            //Debug.Log("func e^x: " + (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1)).ToString());
             if (frameCounter % 20 == 1)
             {
                 float final_velocity = (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1));

@@ -11,6 +11,7 @@ TagManager:
   - terrain
   - menuPause
   - Checkpoint
+  - spider_web
   layers:
   - Default
   - TransparentFX
