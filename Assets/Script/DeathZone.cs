@@ -23,12 +23,8 @@ public class DeathZone : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.position = playerSpawn.position;
-
-            if (astre == true)
-            {
-                Vector3 position = new Vector3(playerSpawn.position.x - 5, 20, 0); 
-                astreMassif.resetPosition(position);
-            }
+            
+            niveau.reinitialiser(playerSpawn.position);
         }
     }
 }

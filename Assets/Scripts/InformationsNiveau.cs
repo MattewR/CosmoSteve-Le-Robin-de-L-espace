@@ -43,5 +43,8 @@ public class InformationsNiveau : MonoBehaviour
 
     }
 
+    virtual public void reinitialiser(Vector3 position)
+    {
 
+    }
 }

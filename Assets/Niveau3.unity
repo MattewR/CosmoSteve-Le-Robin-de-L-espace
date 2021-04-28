@@ -36426,6 +36426,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   massePlanete: 0
   rayonPlanete: 0
+  cible:
+  - {fileID: 1392386603}
+  - {fileID: 596471044}
+  - {fileID: 1630697856}
+  porte:
+  - {fileID: 1296152599}
+  - {fileID: 424199490}
+  - {fileID: 1474672601}
+  - {fileID: 1376324194}
+  astreMassif: {fileID: 1030654344}
 --- !u!4 &477239866
 Transform:
   m_ObjectHideFlags: 0
