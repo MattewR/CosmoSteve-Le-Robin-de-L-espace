@@ -6,6 +6,8 @@ public class DeathZone : MonoBehaviour
     public InformationsNiveau niveau;
     public bool astre;
     public DeplacementAstre astreMassif;
+    public static DeathZone instance;
+
 
     private void Start()
     {
@@ -16,6 +18,13 @@ public class DeathZone : MonoBehaviour
     private void Awake()
     {
         playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de Deathzone dans la scène");
+            return;
+        }
+        instance = this;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +34,7 @@ public class DeathZone : MonoBehaviour
             collision.transform.position = playerSpawn.position;
             
             niveau.reinitialiser(playerSpawn.position);
+            GameOverManager.instance.OnPlayerDeath();
         }
     }
 }

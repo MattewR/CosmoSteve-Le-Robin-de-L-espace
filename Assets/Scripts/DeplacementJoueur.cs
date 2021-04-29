@@ -64,49 +64,39 @@ public class DeplacementJoueur : MonoBehaviour
         ////Script pour toile d'araignée
         if (cFriction == 0.67f)
         {
-          
-            /*if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction / 20)) > 0))
-            {
-                Debug.Log("Droiteeeeeeee");
-                DeplacerJoueur(mouvementHorizontal - (fFriction / 20));
-                dir = 1;
-            }
-            else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction / 20)) > 0))
-            {
-
-                Debug.Log("Gaucheeee");
-                DeplacerJoueur(mouvementHorizontal + (fFriction / 20));
-                dir = -1;
-            }
-            else */
             if (auSol == true)
             {
                 DeplacerJoueur(0);
             }
             else
             {
-                if ((Input.GetAxis("Horizontal") < 0))
-                {
-                    DeplacerJoueur(-(fFriction / 20));
-                }
                 if ((Input.GetAxis("Horizontal") > 0))
                 {
                     DeplacerJoueur((fFriction / 20));
                 }
+                if ((Input.GetAxis("Horizontal") < 0))
+                {
+                    DeplacerJoueur(-(fFriction / 20));
+                }
+                
 
                 if ((Input.GetAxis("Horizontal") == 0)) DeplacerJoueur(0);
             }
+
         }
+
         //Script pour la glace
-        else if (cFriction == 0.03f)
+        else if (cFriction == 0.03)
         {
             if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
             {
+                Debug.Log("Droite");
                 DeplacerJoueur(mouvementHorizontal - fFriction);
                 dir = 1;
             }
             else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
             {
+                Debug.Log("Gauche");
                 DeplacerJoueur(mouvementHorizontal + fFriction);
                 dir = -1;
             }
