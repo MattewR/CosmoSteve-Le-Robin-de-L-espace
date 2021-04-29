@@ -10,8 +10,8 @@ public class InfoSteve : MonoBehaviour
     public int nombreDeVies;
     public Text boiteTexte;
     private Double time = 0;
-
-
+    //public PauseAction pauseAction;
+    public GameObject gameOverCanvas;
 
     public void updateLifeCountDie()
     {
@@ -21,6 +21,11 @@ public class InfoSteve : MonoBehaviour
             boiteTexte.text = "x " + nombreDeVies.ToString();
         }
         time = 0;
+        if(nombreDeVies == 0)
+        {
+            //pauseAction.
+            gameOverCanvas.SetActive(true);
+        }
     }
 
     // Start is called before the first frame update
