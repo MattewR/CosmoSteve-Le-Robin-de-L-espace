@@ -387,7 +387,7 @@ public class FlecheSortClick : MonoBehaviour
                 tracer.AddComponent<SpriteRenderer>();
                 SpriteRenderer imageFleche = tracer.GetComponent<SpriteRenderer>();
                 imageFleche.sprite = Resources.Load<Sprite>("Sprites/rectangleIndicateur");
-
+                
                 imageFleche.sortingLayerName = "Indicator";
 
                 Transform tracerAccesTrans = tracer.GetComponent<Transform>();

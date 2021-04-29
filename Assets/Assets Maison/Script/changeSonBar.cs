@@ -8,12 +8,11 @@ using System;
 public class changeSonBar : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject barDeSon;
-    Slider valSlider;
-    AudioSource source;
+    public GameObject barDeSon;
+    private Slider valSlider;
+    private AudioSource source;
     void Awake()
     {
-        barDeSon = GameObject.Find("SliderBar");
         valSlider = barDeSon.GetComponent<Slider>();
         source = gameObject.GetComponent<AudioSource>();
         source.volume = 0.5f;
