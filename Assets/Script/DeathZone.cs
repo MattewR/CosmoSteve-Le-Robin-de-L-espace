@@ -6,6 +6,7 @@ public class DeathZone : MonoBehaviour
     public InformationsNiveau niveau;
     public bool astre;
     public DeplacementAstre astreMassif;
+    private Sauvegarde sauvegarde;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class DeathZone : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.position = playerSpawn.position;
-            
+           // sauvegarde.ecrire();
             niveau.reinitialiser(playerSpawn.position);
         }
     }
