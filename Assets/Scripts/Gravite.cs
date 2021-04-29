@@ -37,4 +37,9 @@ public class Gravite : MonoBehaviour
     {
         rb.AddForce(forceGravitationnelle);
     }
+
+    float getAccelerationGravitationnelle()
+    {
+        return accelerationGravitationnelle;
+    }
 }

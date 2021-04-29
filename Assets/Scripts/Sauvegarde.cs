@@ -6,10 +6,11 @@ using System.IO;
 
 public class Sauvegarde : MonoBehaviour
 {
-    //StreamWriter fichierDeSauvegarde = new("SauvegardPartie.txt", append: true);
+    //private StreamWriter fichierDeSauvegarde = new StreamWriter("SauvegardePartie.txt");
     
     public void ecrire()
     {
-        //fichierDeSauvegarde.Write("Allo");
+       // fichierDeSauvegarde.Write("Allo");
+       // fichierDeSauvegarde.Close();
     }
 }

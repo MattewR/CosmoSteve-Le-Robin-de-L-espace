@@ -7,6 +7,7 @@ public class DeathZone : MonoBehaviour
     public bool astre;
     public DeplacementAstre astreMassif;
     public static DeathZone instance;
+    private Sauvegarde sauvegarde;
 
 
     private void Start()
@@ -32,7 +33,7 @@ public class DeathZone : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.position = playerSpawn.position;
-            
+           // sauvegarde.ecrire();
             niveau.reinitialiser(playerSpawn.position);
             GameOverManager.instance.OnPlayerDeath();
         }
