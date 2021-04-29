@@ -34,7 +34,7 @@ public class RightOrLeft : MonoBehaviour
 
 
         angle = scriptSuivreSouris.getAngle();
-        Debug.Log(angle);
+        //Debug.Log(angle);
         if (angle < 50 && angle > -25)
         {
             if (Input.GetKey(KeyCode.D))

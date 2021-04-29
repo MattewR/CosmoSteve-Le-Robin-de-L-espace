@@ -10,7 +10,7 @@ public class SuivreSourisArc : MonoBehaviour
 
     private Transform transformDeLArc;
     private float angle;
-    private bool isRight = true;
+    public bool isRight = true;
     private Camera cameraMaison;
     private Vector3 camOffset;
     

@@ -11,6 +11,10 @@ TagManager:
   - terrain
   - menuPause
   - Checkpoint
+  - textChan
+  - Painting
+  - paintingUI
+  - paintingUIText
   layers:
   - Default
   - TransparentFX
@@ -20,12 +24,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Mains
   - Fonddecran
   - "D\xE9cors"
   - PlateformesCachees
   - Plateformes
-  - 
+  - Player
   - 
   - 
   - 
@@ -53,7 +57,4 @@ TagManager:
     locked: 0
   - name: Indicator
     uniqueID: 2123727339
-    locked: 0
-  - name: Mains
-    uniqueID: 1431867987
     locked: 0
