@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine;
+using System;
+
 
 public class DeathZone : MonoBehaviour
 {
@@ -8,6 +13,7 @@ public class DeathZone : MonoBehaviour
     public DeplacementAstre astreMassif;
     public static DeathZone instance;
     private Sauvegarde sauvegarde;
+    public InfoSteve infoVie;
 
 
     private void Start()
@@ -28,10 +34,10 @@ public class DeathZone : MonoBehaviour
         instance = this;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+
         if (collision.CompareTag("Player"))
         {
+            infoVie.updateLifeCountDie();
             collision.transform.position = playerSpawn.position;
            // sauvegarde.ecrire();
             niveau.reinitialiser(playerSpawn.position);

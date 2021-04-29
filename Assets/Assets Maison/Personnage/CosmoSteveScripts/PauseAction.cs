@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PauseAction : MonoBehaviour
 {
-    GameObject canvasMenu;
+    public GameObject canvasMenu;
     // Start is called before the first frame update
     void Awake()
     {
-        canvasMenu = GameObject.Find("mainCanvas");
         canvasMenu.SetActive(false);
 
     }

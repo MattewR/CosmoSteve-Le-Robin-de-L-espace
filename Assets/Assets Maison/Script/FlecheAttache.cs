@@ -33,14 +33,11 @@ public class FlecheAttache : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
+        Debug.Log("TYOREIGRSIOYEFH:SIUAPHI");
         if (!col.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
-        
-        
-        
         
     }
     // Update is called once per frame
@@ -61,7 +58,6 @@ public class FlecheAttache : MonoBehaviour
 
         catch (NullReferenceException)
         {
-            Debug.Log("Waiting for function assignement");
 
         }
 
