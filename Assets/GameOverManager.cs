@@ -2,7 +2,7 @@
 
 public class GameOverManager : MonoBehaviour
 {
-
+/*
     public GameObject gameOverUI;
 
     public GameOverManager instance;
@@ -21,5 +21,5 @@ public class GameOverManager : MonoBehaviour
     public void OnPlayerDeath()
     {
         gameOverUI.setActive(true);
-    }
+    }*/
 }

@@ -34,14 +34,15 @@ public class DeathZone : MonoBehaviour
         instance = this;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.CompareTag("Player"))
         {
             infoVie.updateLifeCountDie();
             collision.transform.position = playerSpawn.position;
            // sauvegarde.ecrire();
             niveau.reinitialiser(playerSpawn.position);
-            GameOverManager.instance.OnPlayerDeath();
+            //GameOverManager.instance.OnPlayerDeath();
         }
     }
 }
