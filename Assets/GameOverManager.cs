@@ -24,6 +24,8 @@ public class GameOverManager : MonoBehaviour
     {
         //Recommencer le niveau 
         SceneManager.LoadScene(nom_scene);
+
+        Time.timeScale = 1;
         gameOverUI.SetActive(false);
     }
 
@@ -33,6 +35,7 @@ public class GameOverManager : MonoBehaviour
 
         SceneManager.LoadScene("MenuPrincipal");
 
+        Time.timeScale = 1;
         gameOverUI.SetActive(false);
     }
 
