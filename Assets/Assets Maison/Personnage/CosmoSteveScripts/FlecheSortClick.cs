@@ -408,6 +408,20 @@ public class FlecheSortClick : MonoBehaviour
             }
         }
 
+        try
+        {
+            if (balles.Count > 25)
+            {
+                UnityEngine.Object.Destroy(balles[0].gameObject);
+                balles.RemoveAt(0);
+            }
+            
+        }
+        finally
+        {
+
+        }
+
         if (Input.GetMouseButtonUp(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
 
@@ -428,7 +442,14 @@ public class FlecheSortClick : MonoBehaviour
             };
 
             fleche = new GameObject();
-            fleche.layer = 8;
+            if (isGravityFunc) {
+                fleche.layer = 8; 
+            }
+            else
+            {
+                fleche.layer = 14;
+            }
+            
             fleche.AddComponent<BoxCollider2D>();
             BoxCollider2D fCollider = fleche.GetComponent<BoxCollider2D>();
             fCollider.size = new Vector2(2.8f, 0.548f);
@@ -439,6 +460,7 @@ public class FlecheSortClick : MonoBehaviour
             SpriteRenderer imageFleche = fleche.GetComponent<SpriteRenderer>();
             imageFleche.sprite = Resources.Load<Sprite>("Sprites/flechemod2");
 
+            
             imageFleche.sortingLayerName = "Mains";
 
             Transform flecheAccesTrans = fleche.GetComponent<Transform>();
@@ -468,6 +490,7 @@ public class FlecheSortClick : MonoBehaviour
                 foreach (var ball in balles)
                 {
                     UnityEngine.Object.Destroy(ball.gameObject);
+                    
                 }
             }
             finally

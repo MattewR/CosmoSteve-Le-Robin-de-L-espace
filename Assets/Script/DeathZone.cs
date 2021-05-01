@@ -18,8 +18,15 @@ public class DeathZone : MonoBehaviour
 
     private void Start()
     {
-        niveau.miseAJour();
-        astre = niveau.getAstre();
+        try
+        {
+            niveau.miseAJour();
+            astre = niveau.getAstre();
+        }
+        catch
+        {
+            Debug.Log("A fixe");
+        }
     }
 
     private void Awake()
@@ -40,8 +47,15 @@ public class DeathZone : MonoBehaviour
         {
             infoVie.updateLifeCountDie();
             collision.transform.position = playerSpawn.position;
-           // sauvegarde.ecrire();
-            niveau.reinitialiser(playerSpawn.position);
+            // sauvegarde.ecrire();
+            try
+            {
+                niveau.reinitialiser(playerSpawn.position);
+            }
+            catch
+            {
+                Debug.Log("fix comme en haut");
+            }
             //GameOverManager.instance.OnPlayerDeath();
         }
     }

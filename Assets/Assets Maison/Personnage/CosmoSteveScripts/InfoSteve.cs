@@ -23,9 +23,9 @@ public class InfoSteve : MonoBehaviour
         time = 0;
         if(nombreDeVies == 0)
         {
-            //pauseAction.
 
-            Time.timeScale = 0; 
+
+            Time.timeScale = 0;
             gameOverCanvas.SetActive(true);
         }
     }

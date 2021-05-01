@@ -31,8 +31,8 @@ TagManager:
   - PlateformesCachees
   - Plateformes
   - Player
-  - 
-  - 
+  - TheGreatSinx
+  - Targets et ennemies
   - 
   - 
   - 
@@ -61,3 +61,4 @@ TagManager:
     locked: 0
   - name: Mains
     uniqueID: 1431867987
+    locked: 0
