@@ -37774,6 +37774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 738836566}
+  sauvegarde: {fileID: 119322117}
+  niveau: niveau 3
 --- !u!61 &738836568
 BoxCollider2D:
   m_ObjectHideFlags: 0

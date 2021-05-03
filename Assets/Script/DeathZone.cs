@@ -12,7 +12,6 @@ public class DeathZone : MonoBehaviour
     public bool astre;
     public DeplacementAstre astreMassif;
     public static DeathZone instance;
-    private Sauvegarde sauvegarde;
     public InfoSteve infoVie;
 
 
@@ -45,7 +44,14 @@ public class DeathZone : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            infoVie.updateLifeCountDie();
+            try
+            {
+                infoVie.updateLifeCountDie();
+            }
+            catch
+            {
+
+            }
             collision.transform.position = playerSpawn.position;
             // sauvegarde.ecrire();
             try
