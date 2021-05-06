@@ -349,7 +349,14 @@ public class FlecheSortClick : MonoBehaviour
 
         if (frameCounter == 0)
         {
-            gravity = scriptGrav.accelerationGravitationnelle;
+            try
+            {
+                gravity = scriptGrav.accelerationGravitationnelle;
+            }
+            finally
+            {
+                //lol
+            }
 
         }
 
