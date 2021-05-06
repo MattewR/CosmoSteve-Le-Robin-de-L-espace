@@ -1103,7 +1103,7 @@ MonoBehaviour:
   niveau: {fileID: 477239865}
   astre: 0
   astreMassif: {fileID: 1030654344}
-  infoVie: {fileID: 0}
+  infoVie: {fileID: 1787085442}
 --- !u!61 &333712338
 BoxCollider2D:
   m_ObjectHideFlags: 0

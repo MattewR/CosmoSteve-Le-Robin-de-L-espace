@@ -10,6 +10,7 @@ public class Sauvegarde : MonoBehaviour
     private List<string> lignes = new List<string>();
     private List<string> listeNiveauCheckpoint = new List<string>();
     private List<string> nouvellesLignes = new List<string>();
+    List<string> temp = new List<string>();
     private int niveauActuel;
     private int niveauCheckpoint;
     private int ordreActuel;
@@ -44,8 +45,7 @@ public class Sauvegarde : MonoBehaviour
 
     public void Verifiacteur(Vector2 position, string niveau, int ordre)
     {
-        List<string> temp = lignes[0].Split('u').ToList();
-        niveauActuel = int.Parse(temp[1]);
+        niveauActuel = GetNumeroNiveau();
 
         listeNiveauCheckpoint = niveau.Split('u').ToList();
         niveauCheckpoint = int.Parse(listeNiveauCheckpoint[1]);
@@ -65,6 +65,14 @@ public class Sauvegarde : MonoBehaviour
     public string GetNiveau()
     {
         return lignes[0];
+    }
+
+    public int GetNumeroNiveau()
+    {
+        Lire();
+        temp.Clear();
+        temp = lignes[0].Split('u').ToList();
+        return int.Parse(temp[1]);
     }
 
     public float GetPositionX()
