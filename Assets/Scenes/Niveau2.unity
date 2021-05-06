@@ -344,6 +344,7 @@ MonoBehaviour:
   animator: {fileID: 98811010}
   sauvegarde: {fileID: 343659514}
   niveau: Niveau2
+  ordre: 1
 --- !u!61 &98811012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71514,6 +71515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1607bce878655b40bb3529116dc306d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sauvegarde: {fileID: 343659514}
 --- !u!4 &1682169152
 Transform:
   m_ObjectHideFlags: 0
@@ -72756,6 +72758,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nom_scene: Niveau3
+  fichierSauvegarde: {fileID: 343659514}
+  position: {x: -20, y: 2}
+  ordre: 0
 --- !u!61 &1799109853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73150,6 +73155,7 @@ MonoBehaviour:
   animator: {fileID: 1805814029}
   sauvegarde: {fileID: 343659514}
   niveau: Niveau2
+  ordre: 2
 --- !u!61 &1805814031
 BoxCollider2D:
   m_ObjectHideFlags: 0

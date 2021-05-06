@@ -37575,6 +37575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1607bce878655b40bb3529116dc306d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sauvegarde: {fileID: 1099344245}
 --- !u!4 &708684720
 Transform:
   m_ObjectHideFlags: 0
@@ -37777,7 +37778,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 738836566}
   sauvegarde: {fileID: 1099344245}
-  niveau: niveau 3
+  niveau: Niveau3
+  ordre: 1
 --- !u!61 &738836568
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39107,7 +39109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1410901951
 MonoBehaviour:
   m_ObjectHideFlags: 0
