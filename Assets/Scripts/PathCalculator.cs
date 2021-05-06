@@ -63,7 +63,7 @@ public class PathCalculator : MonoBehaviour
         targetPosition = new Vector2(targetIntegerPosition.x, targetIntegerPosition.y);
         transform.position = (Vector2)targetPosition;
 
-
+        path = new Dictionary<int, Vector2Int>();
     }
 
     // Start is called before the first frame update
@@ -85,24 +85,25 @@ public class PathCalculator : MonoBehaviour
         {
             chrono = 0;
 
-            if (genFinish && !cible_atteinte && indexe_path <= path.Count && !moving)
+            if (genFinish && !cible_atteinte)
             {
 
-                targetPosition = new Vector2(transform.position.x, transform.position.y);
-
-                targetPosition += path[path.Count - indexe_path];
-
-                MoveToTargetPosition();
-
-                indexe_path++;
-
-                if (transform.position == objet_cible.transform.position)
+                if(indexe_path <= path.Count)
                 {
-                    cible_atteinte = true;
+                    targetPosition = new Vector2(transform.position.x, transform.position.y);
+
+                    targetPosition += path[path.Count - indexe_path];
+
+                    MoveToTargetPosition();
+
+                    indexe_path++;
+
+                    if (transform.position == objet_cible.transform.position)
+                    {
+                        cible_atteinte = true;
+                    }
                 }
 
-                //wait
-                //StartCoroutine(wait(100f));
             }
 
         }
@@ -346,7 +347,7 @@ public class PathCalculator : MonoBehaviour
 
         int indexPath = 0;
 
-        path = new Dictionary<int, Vector2Int>();
+        //path = new Dictionary<int, Vector2Int>();
 
         //on remonte le chemin et on arrête à la position de depart
         while (!positionChemin.Equals(depart))
