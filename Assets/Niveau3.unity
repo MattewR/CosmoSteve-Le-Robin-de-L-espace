@@ -37576,6 +37576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sauvegarde: {fileID: 1099344245}
+  informationsNiveau: {fileID: 477239865}
 --- !u!4 &708684720
 Transform:
   m_ObjectHideFlags: 0
@@ -40470,7 +40471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787085441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.42, y: 0.546, z: 0}
+  m_LocalPosition: {x: -20, y: 2, z: 0}
   m_LocalScale: {x: 0.23716, y: 0.25606, z: 1}
   m_Children:
   - {fileID: 713790094}

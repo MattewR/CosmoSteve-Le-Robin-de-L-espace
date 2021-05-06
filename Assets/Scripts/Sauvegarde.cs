@@ -24,6 +24,7 @@ public class Sauvegarde : MonoBehaviour
 
     public void Lire()
     {
+        lignes.Clear();
         //Lire un fichier
         lignes = File.ReadAllLines(emplacement).ToList();
     }
