@@ -12845,7 +12845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348941629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.03, y: -15.15, z: -49.945618}
+  m_LocalPosition: {x: 2, y: -15, z: -49.945618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12861,7 +12861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413924603}
   - component: {fileID: 1413924602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: HMai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12901,7 +12901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413924601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.03, y: 4.35, z: 0}
+  m_LocalPosition: {x: 32.6, y: 15.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1790578177}
@@ -13508,7 +13508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790578177}
   - component: {fileID: 1790578178}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: angryCharater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13523,7 +13523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790578176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.88, y: 4.91, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1413924603}
