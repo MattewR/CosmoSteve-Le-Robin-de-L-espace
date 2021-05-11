@@ -60,6 +60,8 @@ public class Sauvegarde : MonoBehaviour
         {
             Ecrire(position, niveau, ordre);
         }
+
+        listeNiveauCheckpoint.Clear();
     }
 
     public string GetNiveau()
