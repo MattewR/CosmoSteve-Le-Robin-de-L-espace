@@ -61,7 +61,7 @@ public class FlecheSortClick : MonoBehaviour
     public float fastBallC = 1f;
     private int nombreFoisSin = 0;
     private bool isGravityFunc = false;
-
+    
     GameObject Steve;
     private GameObject fleche;
     private SuivreSourisArc scriptArc;
@@ -82,9 +82,10 @@ public class FlecheSortClick : MonoBehaviour
 
     private bool toBeCalledSin = true;
 
+    
     public void Collision(GameObject collision)
     {
-
+ 
         SwitchFunction();
         cadreUI.gameObject.SetActive(true);
         nombreFoisSinText.gameObject.SetActive(true);
@@ -351,6 +352,7 @@ public class FlecheSortClick : MonoBehaviour
                 {
                     UnityEngine.Object.Destroy(ball.gameObject);
                 }
+                balles.Clear();
             }
             catch
             {
@@ -401,7 +403,7 @@ public class FlecheSortClick : MonoBehaviour
             }
 
         }
-        finally
+        catch
         {
             Debug.LogWarning("Erreur lors du Despawn");
         }
@@ -473,10 +475,11 @@ public class FlecheSortClick : MonoBehaviour
                 foreach (var ball in balles)
                 {
                     UnityEngine.Object.Destroy(ball.gameObject);
-
+                    
                 }
+                balles.Clear();
             }
-            finally
+            catch
             {
                 Debug.LogWarning("Despawn ne marche pas");
             }
