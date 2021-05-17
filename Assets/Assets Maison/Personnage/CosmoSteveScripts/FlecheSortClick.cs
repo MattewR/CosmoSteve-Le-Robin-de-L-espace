@@ -6,7 +6,7 @@ using System;
 
 public class FlecheSortClick : MonoBehaviour
 {
-    
+
     public Func<float, float[], Vector3>[] functionsAttach = { 
                 //fonction f(temps)
                 /*
@@ -61,7 +61,7 @@ public class FlecheSortClick : MonoBehaviour
     public float fastBallC = 1f;
     private int nombreFoisSin = 0;
     private bool isGravityFunc = false;
-
+    
     GameObject Steve;
     private GameObject fleche;
     private SuivreSourisArc scriptArc;
@@ -71,9 +71,9 @@ public class FlecheSortClick : MonoBehaviour
     private Vector3 oldPos = Vector3.zero;
 
     private List<GameObject> balles = new List<GameObject>();
-    
+
     private Gravite scriptGrav;
-    
+
 
     private Rigidbody2D bodySteve;
     public Image cadreUI;
@@ -82,9 +82,10 @@ public class FlecheSortClick : MonoBehaviour
 
     private bool toBeCalledSin = true;
 
+    
     public void Collision(GameObject collision)
     {
-        
+ 
         SwitchFunction();
         cadreUI.gameObject.SetActive(true);
         nombreFoisSinText.gameObject.SetActive(true);
@@ -168,10 +169,6 @@ public class FlecheSortClick : MonoBehaviour
 
                     dy = Mathf.Atan2((dySecond-dy),(dxSecond-dx));
                     dy = dy * Mathf.Rad2Deg;
-                    float angle = variables[2] * Mathf.Rad2Deg;
-                    if (angle > 90 || angle < -90){
-                        return new Vector3(0,0,dy);
-                    }
 
                     return new Vector3(0,0,dy);
                 }
@@ -245,6 +242,7 @@ public class FlecheSortClick : MonoBehaviour
         float bonusY = calcVelBoost().y;
 
         float boolToFloat = 0;
+
         if (scriptArc.isRight)
         {
             boolToFloat = 1;
@@ -291,41 +289,26 @@ public class FlecheSortClick : MonoBehaviour
     {
 
         Steve = this.gameObject;
-        //Debug.Log(Steve);
         scriptArc = Steve.GetComponent<SuivreSourisArc>();
         transformFleche = transform.Find("Vise/flecheAttache");
-        if (transformFleche == null)
-        {
-            Debug.Log("bruh");
-        }
+
+
         scriptGrav = Steve.GetComponent­<Gravite>();
         bodySteve = gameObject.GetComponent<Rigidbody2D>();
+
+
         cadreUI = GameObject.FindGameObjectWithTag("paintingUI").GetComponent<Image>();
         nombreFoisSinText = GameObject.FindGameObjectWithTag("paintingUIText").GetComponent<Text>();
 
 
     }
 
-    /*private Vector3 getTransformVector()
-    {
-        return Steve.transform.position;
-    }*/
 
     private Vector2 calcVelBoost()
     {
-        //Debug.Log("Euler bitch : " + transform.eulerAngles.y.ToString());
-        /*if ((bodySteve.velocity.x < 0 && transform.eulerAngles.y == 0f) || (transform.eulerAngles.y == 180f && bodySteve.velocity.x > 0))
-        {
-            return -bodySteve.velocity.magnitude;
-        }
-        else
-        {
-            return bodySteve.velocity.magnitude;
-        }
-        */
         return bodySteve.velocity;
-
     }
+
     public void ToggleScript()
     {
         timeSpent = 0f;
@@ -344,9 +327,6 @@ public class FlecheSortClick : MonoBehaviour
 
         }
 
-        //Debug.Log("Boost Vector :" + calcVelBoost().ToString());
-
-
         if (frameCounter == 0)
         {
             try
@@ -355,7 +335,7 @@ public class FlecheSortClick : MonoBehaviour
             }
             finally
             {
-                //lol
+                Debug.LogWarning("Aucune info sur la gravité ???");
             }
 
         }
@@ -372,21 +352,22 @@ public class FlecheSortClick : MonoBehaviour
                 {
                     UnityEngine.Object.Destroy(ball.gameObject);
                 }
+                balles.Clear();
             }
             catch
             {
-
+                Debug.LogWarning("Erreur Lors du Despawn");
             }
         }
-
+        
+        //Si et Seulement si c'est pas sur pause et la souris est appuyé et que au moins ça fait 0.5 secondes
         if (Input.GetMouseButton(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
             hold_time += Time.deltaTime;
-            //Debug.Log(hold_time.ToString());
-            //Debug.Log("func e^x: " + (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1)).ToString());
+            //Une balle tout les 20 frames
             if (frameCounter % 20 == 1)
             {
-
+                //Assignes les variables
                 variableVectorSet();
 
                 GameObject tracer = new GameObject();
@@ -394,7 +375,7 @@ public class FlecheSortClick : MonoBehaviour
                 tracer.AddComponent<SpriteRenderer>();
                 SpriteRenderer imageFleche = tracer.GetComponent<SpriteRenderer>();
                 imageFleche.sprite = Resources.Load<Sprite>("Sprites/rectangleIndicateur");
-                
+
                 imageFleche.sortingLayerName = "Indicator";
 
                 Transform tracerAccesTrans = tracer.GetComponent<Transform>();
@@ -406,15 +387,13 @@ public class FlecheSortClick : MonoBehaviour
                 scriptAttRect.fonctionUtil = functionsAttach;
 
 
-                //Debug.Log(scriptAtt.variablesImport[0]);
-                //Debug.Log(scriptAtt.fonctionUtil.Length);
-
 
 
 
             }
         }
 
+        //Ne pas laisser plus de 25 balles a la fois.
         try
         {
             if (balles.Count > 25)
@@ -422,11 +401,11 @@ public class FlecheSortClick : MonoBehaviour
                 UnityEngine.Object.Destroy(balles[0].gameObject);
                 balles.RemoveAt(0);
             }
-            
-        }
-        finally
-        {
 
+        }
+        catch
+        {
+            Debug.LogWarning("Erreur lors du Despawn");
         }
 
         if (Input.GetMouseButtonUp(0) && Time.timeScale == 1 && timeSpent > 0.5f)
@@ -449,14 +428,17 @@ public class FlecheSortClick : MonoBehaviour
             };
 
             fleche = new GameObject();
-            if (isGravityFunc) {
-                fleche.layer = 8; 
+            if (isGravityFunc)
+            {
+                //Layer pour Gravite
+                fleche.layer = 8;
             }
             else
             {
+                //Layer pour Sin(x)
                 fleche.layer = 14;
             }
-            
+
             fleche.AddComponent<BoxCollider2D>();
             BoxCollider2D fCollider = fleche.GetComponent<BoxCollider2D>();
             fCollider.size = new Vector2(2.8f, 0.548f);
@@ -467,11 +449,13 @@ public class FlecheSortClick : MonoBehaviour
             SpriteRenderer imageFleche = fleche.GetComponent<SpriteRenderer>();
             imageFleche.sprite = Resources.Load<Sprite>("Sprites/flechemod2");
 
-            
+
             imageFleche.sortingLayerName = "Mains";
+
 
             Transform flecheAccesTrans = fleche.GetComponent<Transform>();
             flecheAccesTrans.localScale = new Vector3(0.285f, 0.286f, 0) * Scale;
+
             //Attache le script FlecheAttache
             fleche.AddComponent<FlecheAttache>();
             //Va chercher le script
@@ -485,12 +469,6 @@ public class FlecheSortClick : MonoBehaviour
             body.bodyType = RigidbodyType2D.Kinematic;
             body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             body.useFullKinematicContacts = true;
-            /*fleche.AddComponent<BoxCollider2D>();
-            BoxCollider2D colliderFleche = fleche.GetComponent<BoxCollider2D>();
-            colliderFleche.offset = new Vector2(1.4723f, 0.0141f);
-            colliderFleche.size = new Vector2(2.699f, 0.54714f);*/
-            //Debug.Log(scriptAtt.variablesImport[0]);
-            //Debug.Log(scriptAtt.fonctionUtil.Length);
             hold_time = 0;
             try
             {
@@ -499,14 +477,14 @@ public class FlecheSortClick : MonoBehaviour
                     UnityEngine.Object.Destroy(ball.gameObject);
                     
                 }
+                balles.Clear();
             }
-            finally
+            catch
             {
-
+                Debug.LogWarning("Despawn ne marche pas");
             }
         }
 
-        //oldPos = getTransformVector();
 
     }
 };
