@@ -16,6 +16,7 @@ TagManager:
   - Painting
   - paintingUI
   - paintingUIText
+  - Ennemi
   layers:
   - Default
   - TransparentFX
