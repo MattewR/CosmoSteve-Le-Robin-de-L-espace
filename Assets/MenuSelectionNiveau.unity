@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 634157121}
   - component: {fileID: 634157120}
   - component: {fileID: 634157119}
+  - component: {fileID: 634157122}
   m_Layer: 5
   m_Name: Bouton niveau 4
   m_TagString: Untagged
@@ -579,7 +580,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 4
+          m_StringArgument: Niveau4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &634157120
@@ -619,6 +620,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634157117}
   m_CullTransparentMesh: 0
+--- !u!114 &634157122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634157117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f014d4bfc1db94468804cd5c8ff8c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sauvegarde: {fileID: 1883137090}
+  bouton: {fileID: 634157119}
+  niveauADebloquer: 4
 --- !u!1 &736070600
 GameObject:
   m_ObjectHideFlags: 0
