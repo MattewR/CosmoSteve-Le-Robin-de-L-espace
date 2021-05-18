@@ -1,5 +1,5 @@
-Niveau3
+Niveau1
 0
--20
-2
+-1
+0,3
 False
