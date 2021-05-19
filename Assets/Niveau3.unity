@@ -1103,7 +1103,7 @@ MonoBehaviour:
   niveau: {fileID: 477239865}
   astre: 0
   astreMassif: {fileID: 1030654344}
-  infoVie: {fileID: 0}
+  infoVie: {fileID: 1787085442}
 --- !u!61 &333712338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37634,6 +37634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   massePlanete: 0
   rayonPlanete: 0
+  cible: []
+  porte: []
 --- !u!1 &721199896
 GameObject:
   m_ObjectHideFlags: 0
@@ -37774,7 +37776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 738836566}
-  sauvegarde: {fileID: 119322117}
+  sauvegarde: {fileID: 0}
   niveau: niveau 3
 --- !u!61 &738836568
 BoxCollider2D:
