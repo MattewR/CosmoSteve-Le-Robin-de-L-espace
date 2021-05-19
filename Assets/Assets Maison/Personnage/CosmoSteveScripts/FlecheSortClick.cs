@@ -197,7 +197,8 @@ public class FlecheSortClick : MonoBehaviour
                     //En x
                     temps = temps * variables[6];
                     float x = (variables[4] * temps * Mathf.Cos(variables[2])) + variables[0] + variables[7] * temps;
-                    float y = (variables[4] * temps * Mathf.Sin(variables[2]) + variables[1]) + (0.5f * -1 * variables[3] * Mathf.Pow(temps, 2)) + variables[8]*temps;
+                    float y = (variables[4] * temps * Mathf.Sin(variables[2]) + variables[1]) + 
+                    (0.5f * -1 * variables[3] * Mathf.Pow(temps, 2)) + variables[8]*temps;
                     return new Vector3(x, y, 0);
                 },
                 //fonction df(temps)/dtemps
@@ -252,8 +253,8 @@ public class FlecheSortClick : MonoBehaviour
         {
             variablesWFunction = new float[]
             {
-                transformFleche.position.x, // + Mathf.Cos(angle * Mathf.Deg2Rad) * 0.85f,
-                transformFleche.position.y, // + Mathf.Sin(angle * Mathf.Deg2Rad) * 0.85f,
+                transformFleche.position.x, 
+                transformFleche.position.y, 
                 Mathf.Deg2Rad * scriptArc.getAngle(),
                 gravity,
                 final_velocity,
@@ -270,8 +271,8 @@ public class FlecheSortClick : MonoBehaviour
             {
                 1.8f,
                 final_velocity/2.5f,
-                transformFleche.position.x, // + Mathf.Cos(angle * Mathf.Deg2Rad) * 0.85f,
-                transformFleche.position.y, // + Mathf.Sin(angle * Mathf.Deg2Rad) * 0.85f,
+                transformFleche.position.x, 
+                transformFleche.position.y,
                 scriptArc.getAngle(),
                 boolToFloat
 
@@ -488,3 +489,5 @@ public class FlecheSortClick : MonoBehaviour
 
     }
 };
+
+
