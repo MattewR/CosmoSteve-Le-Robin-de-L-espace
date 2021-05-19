@@ -331,7 +331,7 @@ public class FlecheSortClick : MonoBehaviour
         {
             try
             {
-                gravity = scriptGrav.accelerationGravitationnelle;
+                gravity = scriptGrav.getAccelerationGravitationnelle();
             }
             finally
             {
