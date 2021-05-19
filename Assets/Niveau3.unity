@@ -38383,7 +38383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030654342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 893f69c01559ff849a7f89bdc9132c68, type: 3}
   m_Name: 
@@ -40380,6 +40380,7 @@ GameObject:
   - component: {fileID: 1787085444}
   - component: {fileID: 1787085443}
   - component: {fileID: 1787085442}
+  - component: {fileID: 1787085456}
   m_Layer: 13
   m_Name: guetto steve final
   m_TagString: Player
@@ -40666,6 +40667,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787085456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787085441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f69c01559ff849a7f89bdc9132c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astre: {fileID: 1030654346}
+  distance2Rigidbody: 0
+  distanceX: 0
+  distanceY: 0
+  attraction: 0
+  Steve: {fileID: 1787085449}
+  mG: 0
+  angle: 0
+  forceAttraction: {x: 0, y: 0}
 --- !u!1 &1814066251
 GameObject:
   m_ObjectHideFlags: 0
