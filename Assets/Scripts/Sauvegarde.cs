@@ -8,31 +8,94 @@ public class Sauvegarde : MonoBehaviour
 {
     private string emplacement = @"Assets/Resources/SauvegardePartie.txt";
     private List<string> lignes = new List<string>();
-    private List<string> test = new List<string>();
+    private List<string> listeNiveauCheckpoint = new List<string>();
+    private List<string> nouvellesLignes = new List<string>();
+    List<string> temp = new List<string>();
+    private int niveauActuel;
+    private int niveauCheckpoint;
+    private int ordreActuel;
 
-    //    private string emplacement = @"../CosmoSteve-le-Robin-de-L-espace/Assets/Resources/SauvegardePartie.txt";
+    //  private string emplacement = @"../CosmoSteve-le-Robin-de-L-espace/Assets/Resources/SauvegardePartie.txt";
     //  private string emplacement = @"C:/Users/emile/Test GitKraken/CosmoSteve-le-Robin-de-L-espace/Assets/Resources/SauvegardePartie.txt";
 
-
-     public void Lire()
+    private void Start()
     {
+        Lire();
+    }
+
+    public void Lire()
+    {
+        lignes.Clear();
         //Lire un fichier
         lignes = File.ReadAllLines(emplacement).ToList();
-        Debug.Log(lignes[0]);
-        Debug.Log(lignes[1]);
-        Debug.Log(lignes[2]);
     }
 
     //Écrit les informations nécessaires pour la sauvegarde
-    public void Ecrire(Vector2 position, string niveau)
+    public void Ecrire(Vector2 position, string niveau, int ordre)
     {
-        //Debug.Log(Application.dataPath);
-
         //Écrire
-        test.Add(niveau);
-        test.Add(position.x.ToString());
-        test.Add(position.y.ToString());
-        File.WriteAllLines(emplacement, test);
-        test.Clear();
+        nouvellesLignes.Add(niveau);
+        nouvellesLignes.Add(ordre.ToString());
+        nouvellesLignes.Add(position.x.ToString());
+        nouvellesLignes.Add(position.y.ToString());
+        nouvellesLignes.Add("False");
+        File.WriteAllLines(emplacement, nouvellesLignes);
+        nouvellesLignes.Clear();
+    }
+
+    public void Verifiacteur(Vector2 position, string niveau, int ordre)
+    {
+        niveauActuel = GetNumeroNiveau();
+
+        listeNiveauCheckpoint = niveau.Split('u').ToList();
+        niveauCheckpoint = int.Parse(listeNiveauCheckpoint[1]);
+
+        ordreActuel = int.Parse(lignes[1]);
+
+        if (niveauCheckpoint > niveauActuel)
+        {
+            Ecrire(position, niveau, ordre);
+        }
+        else if((niveauCheckpoint == niveauActuel) && (ordre > ordreActuel))
+        {
+            Ecrire(position, niveau, ordre);
+        }
+
+        listeNiveauCheckpoint.Clear();
+    }
+
+    public string GetNiveau()
+    {
+        return lignes[0];
+    }
+
+    public int GetNumeroNiveau()
+    {
+        Lire();
+        temp.Clear();
+        temp = lignes[0].Split('u').ToList();
+        return int.Parse(temp[1]);
+    }
+
+    public float GetPositionX()
+    {
+        return float.Parse(lignes[2]);
+    }
+
+    public float GetPositionY()
+    {
+        return float.Parse(lignes[3]);
+    }
+
+    public bool GetVerificationReprise()
+    {
+        return bool.Parse(lignes[4]);
+    }
+
+    public void SetVerificationReprise(bool reponse)
+    {
+        lignes.RemoveAt(4);
+        lignes.Add(reponse.ToString());
+        File.WriteAllLines(emplacement, lignes);
     }
 }

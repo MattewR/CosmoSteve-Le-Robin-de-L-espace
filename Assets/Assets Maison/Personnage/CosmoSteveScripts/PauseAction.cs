@@ -17,7 +17,7 @@ public class PauseAction : MonoBehaviour
     {
         try
         {
-            Debug.Log(canvasMenu.activeSelf);
+            //Debug.Log(canvasMenu.activeSelf);
         }
         catch
         {

@@ -6,6 +6,7 @@ public class Checkpoint : MonoBehaviour
     private Transform playerSpawn;
     public Sauvegarde sauvegarde;
     public string niveau;
+    public int ordre;
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerSpawn.position = transform.position;
-            sauvegarde.Ecrire(playerSpawn.position, niveau);
+            sauvegarde.Verifiacteur(playerSpawn.position, niveau, ordre);
             animator.SetBool("IsChecked", true);
         }
     }
