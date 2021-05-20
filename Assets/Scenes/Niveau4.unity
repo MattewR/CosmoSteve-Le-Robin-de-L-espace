@@ -2030,15 +2030,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682923864}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14fd834cf36a1f94c86f15bd1a667d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
   nombreDeVies: 0
-  boiteTexte: {fileID: 0}
-  gameOverCanvas: {fileID: 0}
+  boiteTexte: {fileID: 216616547}
+  gameOverCanvas: {fileID: 725658036}
 --- !u!114 &682923866
 MonoBehaviour:
   m_ObjectHideFlags: 0

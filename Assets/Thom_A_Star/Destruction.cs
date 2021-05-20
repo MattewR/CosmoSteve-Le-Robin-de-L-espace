@@ -6,7 +6,11 @@ public class Destruction : MonoBehaviour
     {
         if(!collision.CompareTag("Ennemi"))
         {
-            Destroy(transform.gameObject);
+            Destroy(gameObject);
+        }
+        if(collision.CompareTag("fleche"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
