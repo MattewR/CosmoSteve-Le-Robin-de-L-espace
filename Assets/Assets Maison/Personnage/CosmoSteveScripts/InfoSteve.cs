@@ -42,4 +42,12 @@ public class InfoSteve : MonoBehaviour
     {
         time += Time.deltaTime;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ennemi"))
+        {
+            updateLifeCountDie();
+        }
+    }
 }
