@@ -97,20 +97,21 @@ public class DeplacementJoueur : MonoBehaviour
         //Script pour la glace
         else if (cFriction == 0.03)
         {
-            //Quand Steve bouge a droite
-            if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
-            {
-                Debug.Log("Droite");
-                DeplacerJoueur(mouvementHorizontal - fFriction);
-                dir = 1;
-            }
             //Quand Steve bouge a gauche
-            else if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
+            if ((Input.GetAxis("Horizontal") < 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
             {
                 Debug.Log("Gauche");
                 DeplacerJoueur(mouvementHorizontal + fFriction);
                 dir = -1;
             }
+            //Quand Steve bouge a droite
+            else if ((Input.GetAxis("Horizontal") > 0) && ((System.Math.Abs(mouvementHorizontal) - System.Math.Abs(fFriction)) > 0))
+            {
+                Debug.Log("Droite");
+                DeplacerJoueur(mouvementHorizontal - fFriction);
+                dir = 1;
+            }
+            
             //Quand Steve est immobile
             else if (auSol == true && (Input.GetAxis("Horizontal") == 0))
             {
