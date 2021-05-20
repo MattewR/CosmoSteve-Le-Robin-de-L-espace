@@ -18,8 +18,12 @@ public class spawner : MonoBehaviour
     public bool graphReady = false;
 
     private float chrono = 0;
-    public float vitesseSpawn = 2.0f;
+    private float vitesseSpawn = 9.0f;
     public float tempsDemarage = 1.0f;
+
+    public int nbr_ennemi = 0;
+    public bool fin = false;
+
 
     void Start()
     {
@@ -29,7 +33,7 @@ public class spawner : MonoBehaviour
 
     void Update()
     {
-        if(graphReady)
+        if(graphReady && !fin)
         {
 
             chrono += Time.deltaTime;
@@ -40,6 +44,21 @@ public class spawner : MonoBehaviour
                 chrono = 0;
 
                 spawnEnnemi();
+
+                nbr_ennemi++;
+
+                if(nbr_ennemi >= 20)
+                {
+                    fin = true;
+                }
+                else if(nbr_ennemi >= 15)
+                {
+                    vitesseSpawn = 4.0f;
+                }
+                else if (nbr_ennemi >= 5 )
+                {
+                    vitesseSpawn = 7.0f;
+                }
 
             }
 
