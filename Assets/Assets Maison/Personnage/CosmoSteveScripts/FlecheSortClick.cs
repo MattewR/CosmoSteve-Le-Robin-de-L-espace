@@ -429,6 +429,7 @@ public class FlecheSortClick : MonoBehaviour
             };
 
             fleche = new GameObject();
+            fleche.tag = "fleche";
             if (isGravityFunc)
             {
                 //Layer pour Gravite
