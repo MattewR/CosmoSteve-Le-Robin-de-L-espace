@@ -6,7 +6,6 @@ public class InformationsNiveau : MonoBehaviour
 {
     public float massePlanete;
     public float rayonPlanete;
-    private bool astre = false;
 
     public void setMassePlanete(float _massePlanete)
     {
@@ -18,11 +17,6 @@ public class InformationsNiveau : MonoBehaviour
         rayonPlanete = _rayonPlanete;
     }
 
-    public void setAstre(bool _astre)
-    {
-        astre = _astre;
-    }
-
     public float getMassePlanete()
     {
         return massePlanete;
@@ -31,11 +25,6 @@ public class InformationsNiveau : MonoBehaviour
     public float getRayonPlanete()
     {
         return rayonPlanete;
-    }
-
-    public bool getAstre()
-    {
-        return astre;
     }
 
     virtual public void miseAJour()
