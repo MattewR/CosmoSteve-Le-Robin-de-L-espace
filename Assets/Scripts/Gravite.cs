@@ -10,7 +10,7 @@ public class Gravite : MonoBehaviour
 
     public float accelerationGravitationnelle;
     public float massePlanete;
-    private float constanteG = 6.6742f * Mathf.Pow(10, -11);
+    private float constanteG = 6.6738f * Mathf.Pow(10, -11);
     private float rayonPlanete;
     public float distanceJoueur;
     public float distance;
