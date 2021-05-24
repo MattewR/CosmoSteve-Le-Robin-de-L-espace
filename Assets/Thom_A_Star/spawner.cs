@@ -48,7 +48,7 @@ public class spawner : MonoBehaviour
 
                 nbr_ennemi++;
 
-                if(nbr_ennemi >= 2)
+                if(nbr_ennemi >= 20)
                 {
                     fin = true;
                 }
@@ -59,11 +59,6 @@ public class spawner : MonoBehaviour
                 else if (nbr_ennemi >= 2 )
                 {
                     vitesseSpawn = 7.0f;
-
-                    fin = true;
-
-                    
-
                 }
 
             }

@@ -12,6 +12,6 @@ public class NouvellePartie : MonoBehaviour
         position = new Vector2(-1f, 0.3f);
         sauvegarde.Ecrire(position, "Niveau1", 0);
         sauvegarde.Lire();
-        changementDeScene.Changer_niveau(sauvegarde.GetNiveau());
+        changementDeScene.Changer_niveau("Niveau1");
     }
 }
