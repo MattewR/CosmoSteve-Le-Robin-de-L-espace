@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e4409a5004e044b843d36e6a5451e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 725658036}
   instance: {fileID: 0}
   nom_scene: Niveau4
 --- !u!4 &625357719
