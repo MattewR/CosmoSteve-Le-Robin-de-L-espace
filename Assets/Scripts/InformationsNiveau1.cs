@@ -10,7 +10,6 @@ public class InformationsNiveau1 : InformationsNiveau
     {
         setMassePlanete(5.972f * Mathf.Pow(10, 24));
         setRayonPlanete(6371000);
-        setAstre(false);
     }
 
     public override void reinitialiser(Vector3 position)

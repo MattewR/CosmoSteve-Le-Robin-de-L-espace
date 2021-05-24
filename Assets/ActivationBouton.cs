@@ -12,7 +12,6 @@ public class ActivationBouton : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        Debug.Log(sauvegarde.GetNumeroNiveau());
         if(niveauADebloquer > sauvegarde.GetNumeroNiveau())
         {
             bouton.interactable = false;

@@ -9,23 +9,13 @@ public class DeathZone : MonoBehaviour
 {
     private Transform playerSpawn;
     public InformationsNiveau niveau;
-    public bool astre;
-    public DeplacementAstre astreMassif;
     public static DeathZone instance;
     public InfoSteve infoVie;
 
 
     private void Start()
     {
-        try
-        {
-            niveau.miseAJour();
-            astre = niveau.getAstre();
-        }
-        catch
-        {
-            Debug.Log("A fixe");
-        }
+ 
     }
 
     private void Awake()

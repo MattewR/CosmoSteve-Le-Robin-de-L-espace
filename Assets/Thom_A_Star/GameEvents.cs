@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
-    public bool TESTPathGenCall = false;
 
     private void Awake()
     {
@@ -22,10 +18,7 @@ public class GameEvents : MonoBehaviour
         if(pathGenTriggerReady != null)
         {
             pathGenTriggerReady();
-            TESTPathGenCall = true;
         }
     }
-
-
 
 }
