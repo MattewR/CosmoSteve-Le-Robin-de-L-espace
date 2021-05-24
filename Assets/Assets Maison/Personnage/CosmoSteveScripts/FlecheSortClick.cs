@@ -67,8 +67,6 @@ public class FlecheSortClick : MonoBehaviour
     private SuivreSourisArc scriptArc;
     private Transform transformFleche;
 
-    private Vector3 positionFleche;
-    private Vector3 oldPos = Vector3.zero;
 
     private List<GameObject> balles = new List<GameObject>();
 
@@ -238,10 +236,12 @@ public class FlecheSortClick : MonoBehaviour
 
     private void variableVectorSet()
     {
+        //Vélocité final après avoir charger l'arc
         float final_velocity = (starting_velocity * ((-1 * (Mathf.Exp(-0.5f * hold_time))) + 1));
+        //Ramasse la composante x du vecteur de vitesse de Steve
         float bonusX = calcVelBoost().x;
+        //Ramasse la composante y du vecteur de vitesse de Steve
         float bonusY = calcVelBoost().y;
-
         float boolToFloat = 0;
 
         if (scriptArc.isRight)
@@ -251,15 +251,25 @@ public class FlecheSortClick : MonoBehaviour
 
         if (isGravityFunc)
         {
+            //Paramètres pour fonction gravité
             variablesWFunction = new float[]
             {
+                //Position en x de Steve
                 transformFleche.position.x, 
+                //Position en y de Steve
                 transformFleche.position.y, 
+                //Donne l'angle en degrées
                 Mathf.Deg2Rad * scriptArc.getAngle(),
+                //gravité de la planète
                 gravity,
+                //Vélocité final basée sur combien de temps le personnage charge son arc
                 final_velocity,
+                //lisse la rotation de la flèche en diminuant le module de la pente
                 6f,
+                //Constante pour accélérer les balles
+                //N'importe pas pour la flèche
                 1,
+                //Bonus de vitesse donnée par Steve aux balles ou aux flèches
                 bonusX,
                 bonusY
 
@@ -267,13 +277,20 @@ public class FlecheSortClick : MonoBehaviour
         }
         else
         {
+            //Paramètres pour fonction sin(x)
             variablesWFunction = new float[]
             {
+                //Amplitude de la fonction sin(x)
                 1.8f,
+                //Vélocité final de la fonction sin(x)
                 final_velocity/2.5f,
-                transformFleche.position.x, 
+                //Position en x de Steve
+                transformFleche.position.x,
+                //Position en y de Steve
                 transformFleche.position.y,
+                //Donne l'angle en radians
                 scriptArc.getAngle(),
+                //Indique si Steve vise à droite ou à gauche
                 boolToFloat
 
 
