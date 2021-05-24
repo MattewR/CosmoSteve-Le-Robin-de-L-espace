@@ -319,8 +319,6 @@ public class PathCalculator2 : MonoBehaviour
                 //s1 est à gauche du graph
             }
 
-            //fin = true;
-
         }
 
 
@@ -330,7 +328,6 @@ public class PathCalculator2 : MonoBehaviour
 
         int indexPath = 0;
 
-        //path = new Dictionary<int, Vector2Int>();
 
         //on remonte le chemin et on arrête à la position de depart
         while (!positionChemin.Equals(depart))

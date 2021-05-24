@@ -226,7 +226,6 @@ public class Scanning : MonoBehaviour
             nbr_case_scaned++;
 
             //doit arrêter le script
-            //this.StopAllCoroutines;
 
             fin = true;
         }
