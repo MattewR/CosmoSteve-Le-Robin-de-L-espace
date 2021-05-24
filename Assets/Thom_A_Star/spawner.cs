@@ -24,7 +24,7 @@ public class spawner : MonoBehaviour
     public int nbr_ennemi = 0;
     public bool fin = false;
 
-    public GameObject gameWonCanvas;
+    public ChangementDeScene sceneFinale;
 
     void Start()
     {
@@ -74,7 +74,7 @@ public class spawner : MonoBehaviour
             //TIMER DE 30 SECONDES
 
             Time.timeScale = 0;
-            gameWonCanvas.SetActive(true);
+            sceneFinale.Changer_niveau("MenuFin");
         }
     }
 
