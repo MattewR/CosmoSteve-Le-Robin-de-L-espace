@@ -10091,8 +10091,9 @@ MonoBehaviour:
   position5: {fileID: 917712611}
   position6: {fileID: 182438632}
   graphReady: 0
-  vitesseSpawn: 7
   tempsDemarage: 0.5
+  nbr_ennemi: 0
+  fin: 0
 --- !u!4 &1605295640
 Transform:
   m_ObjectHideFlags: 0
