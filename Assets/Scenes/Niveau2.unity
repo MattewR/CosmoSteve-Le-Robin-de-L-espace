@@ -193,8 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &68713180
 SpriteRenderer:
@@ -354,7 +352,7 @@ Transform:
   m_LocalScale: {x: 0.15326, y: 0.14072, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &98811010
 Animator:
@@ -559,8 +557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &111522346
 SpriteRenderer:
@@ -986,8 +982,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &165448300
 SpriteRenderer:
@@ -1211,8 +1205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &189736300
 SpriteRenderer:
@@ -1496,8 +1488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &219963181
 SpriteRenderer:
@@ -1751,8 +1741,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &237572955
 SpriteRenderer:
@@ -2038,8 +2026,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &309946347
 SpriteRenderer:
@@ -2570,8 +2556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &367545088
 SpriteRenderer:
@@ -2715,8 +2699,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &441284390
 SpriteRenderer:
@@ -2938,8 +2920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &477314556
 SpriteRenderer:
@@ -3028,7 +3008,7 @@ RectTransform:
   - {fileID: 1688039969}
   - {fileID: 97818383}
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3187,8 +3167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &531113791
 SpriteRenderer:
@@ -3332,8 +3310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &536676817
 SpriteRenderer:
@@ -3457,8 +3433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &554467897
 SpriteRenderer:
@@ -3602,8 +3576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &557276101
 SpriteRenderer:
@@ -3939,8 +3911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &607115841
 SpriteRenderer:
@@ -4064,8 +4034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &612387410
 SpriteRenderer:
@@ -4189,8 +4157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 0}
 --- !u!212 &613310878
 SpriteRenderer:
@@ -4551,8 +4517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &717544782
 SpriteRenderer:
@@ -4831,8 +4795,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &730969305
 SpriteRenderer:
@@ -4956,8 +4918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &764508275
 SpriteRenderer:
@@ -5081,8 +5041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &765237739
 SpriteRenderer:
@@ -5226,8 +5184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &767226280
 SpriteRenderer:
@@ -5555,8 +5511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &831512744
 SpriteRenderer:
@@ -5822,8 +5776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &882493056
 SpriteRenderer:
@@ -5947,8 +5899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &928612598
 SpriteRenderer:
@@ -6072,8 +6022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &931685206
 SpriteRenderer:
@@ -6197,8 +6145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &958807727
 SpriteRenderer:
@@ -6452,8 +6398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &981650992
 SpriteRenderer:
@@ -7009,8 +6953,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1067817929
 SpriteRenderer:
@@ -7134,8 +7076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1073655720
 SpriteRenderer:
@@ -7279,8 +7219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1084892908
 SpriteRenderer:
@@ -7516,8 +7454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1146923275
 SpriteRenderer:
@@ -7661,8 +7597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1151334581
 SpriteRenderer:
@@ -7880,8 +7814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1212313616
 SpriteRenderer:
@@ -8014,7 +7946,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1216066064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 331528394}
+        m_MethodName: quiter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1216066064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8144,8 +8087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1222616167
 SpriteRenderer:
@@ -8269,8 +8210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1226531522
 SpriteRenderer:
@@ -68711,8 +68650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1289177745
 SpriteRenderer:
@@ -68810,8 +68747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!61 &1312694273
 BoxCollider2D:
@@ -69063,8 +68998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1347617482
 SpriteRenderer:
@@ -69195,7 +69128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378444425
 GameObject:
@@ -69319,8 +69252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1382375843
 SpriteRenderer:
@@ -69474,6 +69405,147 @@ Transform:
   m_Father: {fileID: 1713693768}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.075005}
+--- !u!1 &1406925910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406925911}
+  - component: {fileID: 1406925913}
+  - component: {fileID: 1406925912}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406925911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406925910}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 474.9172, y: 237.32825, z: -314.43338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1653847118}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406925912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406925910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c1ff6b09227734ea2b05694ff5838f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barDeSon: {fileID: 1288605234}
+--- !u!82 &1406925913
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406925910}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 89862607952e1084e857e6fa22caecb2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1409570192
 GameObject:
   m_ObjectHideFlags: 0
@@ -69566,8 +69638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1409570197
 SpriteRenderer:
@@ -69795,8 +69865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1451249526
 SpriteRenderer:
@@ -69940,8 +70008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1458996079
 SpriteRenderer:
@@ -70085,8 +70151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1516539038
 SpriteRenderer:
@@ -70267,7 +70331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1531711203
 MonoBehaviour:
@@ -70282,8 +70346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 1365724359}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!61 &1531711204
 BoxCollider2D:
@@ -70383,8 +70445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1553417928
 SpriteRenderer:
@@ -70873,8 +70933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1602459101
 SpriteRenderer:
@@ -70998,8 +71056,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1609267672
 SpriteRenderer:
@@ -71143,8 +71199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1612345954
 SpriteRenderer:
@@ -71301,7 +71355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1634143655
 MonoBehaviour:
@@ -71396,6 +71450,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1406925911}
   - {fileID: 1634143654}
   - {fileID: 485862643}
   - {fileID: 1365724360}
@@ -71478,8 +71533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1659758919
 SpriteRenderer:
@@ -71574,7 +71627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685552272
 GameObject:
@@ -71810,8 +71863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!61 &1689150559
 BoxCollider2D:
@@ -71962,8 +72013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1690362173
 SpriteRenderer:
@@ -72107,8 +72156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1700243474
 SpriteRenderer:
@@ -72252,8 +72299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1708923131
 SpriteRenderer:
@@ -72450,8 +72495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1723188165
 SpriteRenderer:
@@ -72600,8 +72643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!61 &1733831985
 BoxCollider2D:
@@ -72701,8 +72742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1737843598
 SpriteRenderer:
@@ -72842,8 +72881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1763050162
 SpriteRenderer:
@@ -73042,8 +73079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1801528541
 SpriteRenderer:
@@ -73196,7 +73231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 331528394}
         m_MethodName: deactivateMenu
         m_Mode: 1
         m_Arguments:
@@ -73207,7 +73242,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 331528396}
         m_MethodName: ToggleScript
         m_Mode: 1
         m_Arguments:
@@ -73287,7 +73322,7 @@ Transform:
   m_LocalScale: {x: 0.15326, y: 0.14072, z: 1}
   m_Children: []
   m_Father: {fileID: 1653847118}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1805814029
 Animator:
@@ -73570,8 +73605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1834707361
 SpriteRenderer:
@@ -73715,8 +73748,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1865668562
 SpriteRenderer:
@@ -73860,8 +73891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1889505662
 SpriteRenderer:
@@ -73985,8 +74014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1922491171
 SpriteRenderer:
@@ -74110,8 +74137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1956492995
 SpriteRenderer:
@@ -74235,8 +74260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 1365724359}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1959712478
 SpriteRenderer:
@@ -74360,8 +74383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1980700756
 SpriteRenderer:
@@ -74485,8 +74506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &1993514173
 SpriteRenderer:
@@ -74610,8 +74629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2013587684
 SpriteRenderer:
@@ -74816,8 +74833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2017038396
 SpriteRenderer:
@@ -74961,8 +74976,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2035918848
 SpriteRenderer:
@@ -75086,8 +75099,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2056914723
 SpriteRenderer:
@@ -75349,8 +75360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2095037145
 SpriteRenderer:
@@ -75568,8 +75577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2121432783
 SpriteRenderer:
@@ -75693,8 +75700,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niveau: {fileID: 0}
-  astre: 0
-  astreMassif: {fileID: 0}
   infoVie: {fileID: 331528386}
 --- !u!212 &2130619886
 SpriteRenderer:

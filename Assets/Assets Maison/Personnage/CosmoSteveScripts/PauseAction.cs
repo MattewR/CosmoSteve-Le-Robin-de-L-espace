@@ -37,6 +37,10 @@ public class PauseAction : MonoBehaviour
 
     }
 
+    public void quiter()
+    {
+        Application.Quit();
+    }
 
 
     public void activateMenu()
