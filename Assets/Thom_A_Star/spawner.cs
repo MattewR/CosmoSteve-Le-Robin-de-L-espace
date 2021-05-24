@@ -24,6 +24,7 @@ public class spawner : MonoBehaviour
     public int nbr_ennemi = 0;
     public bool fin = false;
 
+    public GameObject gameWonCanvas;
 
     void Start()
     {
@@ -47,7 +48,7 @@ public class spawner : MonoBehaviour
 
                 nbr_ennemi++;
 
-                if(nbr_ennemi >= 20)
+                if(nbr_ennemi >= 2)
                 {
                     fin = true;
                 }
@@ -62,6 +63,13 @@ public class spawner : MonoBehaviour
 
             }
 
+        }
+        if (fin == true)
+        {
+            //TIMER DE 30 SECONDES
+
+            Time.timeScale = 0;
+            gameWonCanvas.SetActive(true);
         }
     }
 
