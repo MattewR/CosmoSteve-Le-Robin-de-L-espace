@@ -351,7 +351,7 @@ public class FlecheSortClick : MonoBehaviour
             {
                 gravity = scriptGrav.getAccelerationGravitationnelle();
             }
-            finally
+            catch
             {
                 Debug.LogWarning("Aucune info sur la gravité ???");
             }
@@ -382,8 +382,8 @@ public class FlecheSortClick : MonoBehaviour
         if (Input.GetMouseButton(0) && Time.timeScale == 1 && timeSpent > 0.5f)
         {
             hold_time += Time.deltaTime;
-            //Une balle tout les 20 frames
-            if (frameCounter % 20 == 1)
+            //Une balle tout les 30 frames
+            if (frameCounter % 30 == 1)
             {
                 //Assignes les variables
                 variableVectorSet();
@@ -414,7 +414,7 @@ public class FlecheSortClick : MonoBehaviour
         //Ne pas laisser plus de 25 balles a la fois.
         try
         {
-            if (balles.Count > 25)
+            if (balles.Count > 120)
             {
                 UnityEngine.Object.Destroy(balles[0].gameObject);
                 balles.RemoveAt(0);
