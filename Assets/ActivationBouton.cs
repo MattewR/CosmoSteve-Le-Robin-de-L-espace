@@ -12,7 +12,14 @@ public class ActivationBouton : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        if(niveauADebloquer > sauvegarde.GetNumeroNiveau())
+        try
+        {
+            if (niveauADebloquer > sauvegarde.GetNumeroNiveau())
+            {
+                bouton.interactable = false;
+            }
+        }
+        catch
         {
             bouton.interactable = false;
         }

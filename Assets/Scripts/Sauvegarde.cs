@@ -20,14 +20,30 @@ public class Sauvegarde : MonoBehaviour
 
     private void Start()
     {
-        Lire();
+        try
+        {
+            Lire();
+        }
+        catch
+        {
+            emplacement = @"Cosmo Steve le Robin de l'espace_Data/Resources/SauvegardePartie.txt";
+            Lire();
+        }
     }
 
     public void Lire()
     {
         lignes.Clear();
         //Lire un fichier
-        lignes = File.ReadAllLines(emplacement).ToList();
+        try
+        {
+            lignes = File.ReadAllLines(emplacement).ToList();
+        }
+        catch
+        {
+            emplacement = @"Cosmo Steve le Robin de l'espace_Data/Resources/SauvegardePartie.txt";
+            lignes = File.ReadAllLines(emplacement).ToList();
+        }
     }
 
     //Écrit les informations nécessaires pour la sauvegarde
@@ -89,6 +105,7 @@ public class Sauvegarde : MonoBehaviour
 
     public bool GetVerificationReprise()
     {
+        Lire();
         return bool.Parse(lignes[4]);
     }
 
