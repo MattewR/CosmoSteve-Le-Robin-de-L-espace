@@ -14,7 +14,7 @@ public class Gravite : MonoBehaviour
     private float rayonPlanete;
 
 
-    // Start calcule la grandeur de la force ravitationnelle à appliquer à l'objet
+    // Start calcule la grandeur de la force gravitationnelle à appliquer à l'objet
     void Start()
     {
         InitialisationDesValeurs();
@@ -29,9 +29,8 @@ public class Gravite : MonoBehaviour
         Attraction();
     }
 
-
     //Cette méthode applique une force gravitationnelle vers la planète
-    void Attraction()
+    private void Attraction()
     {
         rb.AddForce(forceGravitationnelle);
     }

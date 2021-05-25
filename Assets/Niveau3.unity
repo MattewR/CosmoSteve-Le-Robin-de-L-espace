@@ -38532,7 +38532,7 @@ MonoBehaviour:
   distanceX: 0
   distanceY: 0
   attraction: 0
-  Steve: {fileID: 1787085449}
+  rb: {fileID: 0}
   mG: 0
   angle: 0
   forceAttraction: {x: 0, y: 0}
@@ -40646,8 +40646,6 @@ MonoBehaviour:
   informationsNiveau: {fileID: 477239865}
   accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
-  distanceJoueur: 0
-  distance: 0
 --- !u!114 &1787085448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40845,7 +40843,7 @@ MonoBehaviour:
   distanceX: 0
   distanceY: 0
   attraction: 0
-  Steve: {fileID: 1787085449}
+  rb: {fileID: 1787085449}
   mG: 0
   angle: 0
   forceAttraction: {x: 0, y: 0}

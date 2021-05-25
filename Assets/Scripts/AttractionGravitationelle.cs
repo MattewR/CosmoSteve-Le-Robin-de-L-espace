@@ -12,17 +12,17 @@ public class AttractionGravitationelle : MonoBehaviour
     public float distanceX;
     public float distanceY;
     public float attraction;
-    public Rigidbody2D Steve;
+    public Rigidbody2D rb;
     public float mG;
     public float angle;
     public Vector2 forceAttraction;
     private Vector2 vecteurUnitaire;
     private float masseAstre = 20000000000000;
 
-    //Les valeurs constantes dans la formule gravitationnelle sont calculées au départ
+    //Le produit des valeurs constantes dans la formule gravitationnelle est calculé au départ
     void Start()
     {
-        mG = masseAstre * constanteGravitationnelle * Steve.mass;
+        mG = masseAstre * constanteGravitationnelle * rb.mass;
     }
 
     //Cette méthode permet d'appliquer la force gravitationnelle au personnage
@@ -33,7 +33,7 @@ public class AttractionGravitationelle : MonoBehaviour
 
         vecteurUnitaire = CalculVecteurUnitaire();
         forceAttraction = vecteurUnitaire * attraction;
-        Steve.AddForce(forceAttraction);
+        rb.AddForce(forceAttraction);
     }
 
     //Cette méthode calcule la distance au carré qui sépare le centre de l'astre et le centre de l'objet
