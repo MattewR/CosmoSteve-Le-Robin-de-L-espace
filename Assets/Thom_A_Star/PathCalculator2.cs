@@ -144,6 +144,10 @@ public class PathCalculator2 : MonoBehaviour
 
     }
 
+    /*
+     La génétation du chemin comprend l'algorithme A*
+     et la construction de la chaine de déplacement pour se rendre du départ à l'arrivé en remontant l'analyse de A*
+     */
     private void PathGeneration()
     {
 
@@ -187,8 +191,11 @@ public class PathCalculator2 : MonoBehaviour
 
                 if (!dH.ContainsKey(coordinate)) // si il n'y a pas déjà un obstacle
                 {
-                    int delta_x = (x_depart - x_cible) * (x_depart - x_cible);
-                    int delta_y = (y_depart - y_depart) * (y_depart - y_depart);
+
+                    
+
+                    int delta_x = (x_depart - l) * (x_depart - l);
+                    int delta_y = (y_depart - h) * (y_depart - h);
 
                     int fonction_h = (int)(Mathf.Sqrt(delta_x + delta_y));
                     dH[coordinate] = fonction_h;
