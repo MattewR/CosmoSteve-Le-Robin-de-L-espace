@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeathZone
+  - PlayerSpawn
+  - snow_bar
+  - snow_bar_tilted
+  - terrain
+  - menuPause
+  - Checkpoint
+  - spider_web
+  - textChan
+  - Painting
+  - paintingUI
+  - paintingUIText
+  - Ennemi
+  - fleche
   layers:
   - Default
   - TransparentFX
@@ -13,14 +27,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Mains
+  - Fonddecran
+  - "D\xE9cors"
+  - PlateformesCachees
+  - Plateformes
+  - Player
+  - TheGreatSinx
+  - Targets et ennemies
   - 
   - 
   - 
@@ -38,6 +52,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3448484867
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Indicator
+    uniqueID: 2123727339
+    locked: 0
+  - name: Mains
+    uniqueID: 1431867987
     locked: 0
