@@ -26,6 +26,11 @@ public class spawner : MonoBehaviour
 
     public ChangementDeScene sceneFinale;
 
+    private float chronoFin = 0;
+    public float minuterie30s = 30.0f;
+
+    public bool gameFini = false;
+
     void Start()
     {
         GameEvents.current.pathGenTriggerReady += StartSpawn;
@@ -67,9 +72,18 @@ public class spawner : MonoBehaviour
         if (fin == true)
         {
             //TIMER DE 30 SECONDES
+            chronoFin += Time.deltaTime;
+            
+            if(chronoFin >= minuterie30s && !gameFini)
+            {
+                //fin du jeu
+                Time.timeScale = 0;
+                sceneFinale.Changer_niveau("MenuFin");
 
-            Time.timeScale = 0;
-            sceneFinale.Changer_niveau("MenuFin");
+                gameFini = true;
+            }
+
+
         }
     }
 

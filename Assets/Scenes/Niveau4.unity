@@ -1486,7 +1486,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389894530}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &389894533
 Camera:
   m_ObjectHideFlags: 0
@@ -2265,8 +2265,6 @@ MonoBehaviour:
   informationsNiveau: {fileID: 1098529867}
   accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
-  distanceJoueur: 0
-  distance: 0
 --- !u!114 &682923871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10667,6 +10665,8 @@ MonoBehaviour:
   nbr_ennemi: 0
   fin: 0
   sceneFinale: {fileID: 171051671}
+  minuterie30s: 30
+  gameFini: 0
 --- !u!4 &1605295640
 Transform:
   m_ObjectHideFlags: 0

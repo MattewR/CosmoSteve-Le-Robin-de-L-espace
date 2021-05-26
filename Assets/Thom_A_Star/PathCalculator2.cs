@@ -192,10 +192,10 @@ public class PathCalculator2 : MonoBehaviour
                 if (!dH.ContainsKey(coordinate)) // si il n'y a pas déjà un obstacle
                 {
 
-                    
+                    //la fonction de coût est la distance pythagorienne entre le sommet actuel et le sommet d'arrivé
 
-                    int delta_x = (x_depart - l) * (x_depart - l);
-                    int delta_y = (y_depart - h) * (y_depart - h);
+                    int delta_x = (x_cible - l) * (x_cible - l);
+                    int delta_y = (y_cible - h) * (y_cible - h);
 
                     int fonction_h = (int)(Mathf.Sqrt(delta_x + delta_y));
                     dH[coordinate] = fonction_h;
