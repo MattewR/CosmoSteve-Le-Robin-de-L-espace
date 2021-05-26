@@ -1256,7 +1256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 48.999466, y: -2.2221298}
+  m_Offset: {x: 41.85518, y: -4.603573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1267,7 +1267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 161.4927, y: 5.4442596}
+  m_Size: {x: 175.78128, y: 8.421059}
   m_EdgeRadius: 0
 --- !u!4 &333712339
 Transform:
@@ -38532,7 +38532,7 @@ MonoBehaviour:
   distanceX: 0
   distanceY: 0
   attraction: 0
-  Steve: {fileID: 1787085449}
+  rb: {fileID: 0}
   mG: 0
   angle: 0
   forceAttraction: {x: 0, y: 0}
@@ -40646,8 +40646,6 @@ MonoBehaviour:
   informationsNiveau: {fileID: 477239865}
   accelerationGravitationnelle: 0
   massePlanete: 5.972e+24
-  distanceJoueur: 0
-  distance: 0
 --- !u!114 &1787085448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40845,7 +40843,7 @@ MonoBehaviour:
   distanceX: 0
   distanceY: 0
   attraction: 0
-  Steve: {fileID: 1787085449}
+  rb: {fileID: 1787085449}
   mG: 0
   angle: 0
   forceAttraction: {x: 0, y: 0}
