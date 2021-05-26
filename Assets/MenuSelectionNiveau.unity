@@ -1318,7 +1318,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Niveau 3 : Proxima b'
+  m_Text: 'Niveau 3 : Proxima b
+
+'
 --- !u!222 &1236965599
 CanvasRenderer:
   m_ObjectHideFlags: 0
